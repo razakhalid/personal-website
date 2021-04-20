@@ -1,0 +1,19 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem calc((100vw - 1250px) / 2);
+  align-items: center;
+  /* background-color: grey; */
+  height: 90px;
+}
+
+.logo-wrapper {
+  width: 150px;
+  /* background-color: yellow; */
+
+  /* margin-top: 10px; */
+}
+
+.logo {
+  width: 100%;
+}
