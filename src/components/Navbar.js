@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import logo from "../images/logo.png";
 
 export default function Navbar() {
@@ -7,12 +7,12 @@ export default function Navbar() {
     <div>
       <nav className="navbar">
         <div className="logo-wrapper">
-          <Link to="/">
+          <Link to="/personal-website">
             <img src={logo} className="logo" />
           </Link>
         </div>
         <div className="links-wrapper">
-          <Link to="/" className="btn">
+          <Link to="/personal-website" className="btn">
             Home
           </Link>
           <Link to="/experience" className="btn">
@@ -24,6 +24,7 @@ export default function Navbar() {
           <Link to="/contact" className="btn">
             Contact
           </Link>
+          <Redirect to="/personal-website" />
         </div>
       </nav>
     </div>

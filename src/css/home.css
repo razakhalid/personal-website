@@ -1,0 +1,24 @@
+.content-wrapper {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  /* background-color: lightpink; */
+}
+
+.text-wrapper {
+  /* background-color: lightgrey; */
+  text-align: center;
+  width: 600px;
+}
+
+.btn-wrapper {
+}
+
+.img-wrapper {
+}
+
+img {
+  border-radius: 200px;
+}
