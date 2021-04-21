@@ -1,24 +1,23 @@
-.content-wrapper {
-  margin-top: 10vh;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  /* align-items: center; */
-  /* background-color: lightpink; */
-}
-
 .text-wrapper {
-  /* background-color: lightgrey; */
-  text-align: center;
-  width: 600px;
+  padding: var(--padding);
+  min-width: 400px;
+  width: 50%;
+  /* background-color: yellow; */
 }
 
-.btn-wrapper {
+.text-header {
+  margin-top: calc(var(--margin-large));
 }
 
 .img-wrapper {
+  width: 25vw;
 }
 
 img {
+  width: 100%;
   border-radius: 200px;
+  padding: var(--padding);
+}
+
+@media (max-width: 600px) {
 }

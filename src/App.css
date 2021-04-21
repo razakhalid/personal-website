@@ -4,6 +4,20 @@
 @import "./css/buttons.css";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
 
+:root {
+  --primary-yellow: rgb(240, 183, 15);
+  --primary-yellow__hover: rgba(240, 183, 15, 0.4);
+  --font-size: 1.03em;
+  --font-size__responsive: 0.8em;
+  --title-medium: 1.5em;
+  --title-large: 2em;
+  --margin-small: 1em;
+  --margin-medium: 2em;
+  --margin-large: 3em;
+  --padding: 1em;
+  --side-padding: 1rem calc((100vw - 1700px) / 2);
+}
+
 *,
 *::before,
 *::after {
@@ -12,9 +26,41 @@
   box-sizing: border-box;
   font-family: Noto Sans JP, sans-serif;
   color: black;
-  font-size: 1.1rem;
+  font-size: var(--font-size);
 }
 
-.content {
-  padding: 0.2rem calc((100vw - 1250px) / 2);
+.content-wrapper {
+  margin: auto;
+  margin-top: 10vh;
+  padding: var(--side-padding);
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  width: 90vw;
+  /* background-color: green; */
+}
+
+.title-large {
+  font-size: var(--title-large);
+  /* margin: 0 var(--margin-small) 0 var(--margin-small); */
+  padding: var(--padding);
+}
+
+.title-medium {
+  font-size: var(--title-medium);
+}
+
+@media (max-width: 600px) {
+  :root {
+    font-size: var(--font-size__responsive);
+  }
+  .content-wrapper {
+    margin-top: 0;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .title-large {
+    padding: 0.2em;
+  }
 }

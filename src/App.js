@@ -11,7 +11,7 @@ function App() {
     <Router>
       <div className="App"></div>
       <Navbar />
-      <div className="content">
+      <div className="content-wrapper">
         <Switch>
           <Route path="/personal-website">
             <Home />
