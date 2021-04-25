@@ -1,0 +1,17 @@
+.icon-wrapper {
+  margin-top: 25vh;
+  width: 50vh;
+  display: flex;
+  justify-content: space-around;
+  /* background-color: yellow; */
+}
+
+.icon {
+  width: 80%;
+  border: 2px solid var(--primary-yellow);
+  /* border-radius: 30px; */
+  padding: var(--padding);
+}
+
+@media (max-width: 600px) {
+}

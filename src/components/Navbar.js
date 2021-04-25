@@ -1,19 +1,19 @@
 import React from "react";
 import { Link, Redirect } from "react-router-dom";
 import logo from "../images/logo.png";
-import { useLocation, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
-  const location = useLocation();
-  const { pathname } = location;
-  const splitLocation = pathname.split("/");
+  // const location = useLocation();
+  // const { pathname } = location;
+  // const splitLocation = pathname.split("/")
 
   return (
     <>
       <nav className="navbar">
         <div className="logo-wrapper">
           <Link to="/personal-website">
-            <img src={logo} className="logo" />
+            <img src={logo} className="logo" alt="" />
           </Link>
         </div>
         <ul className="tabs-wrapper">
@@ -32,7 +32,7 @@ export default function Navbar() {
               className="tab"
               activeClassName="active-tab"
             >
-              My Experience
+              Experience
             </NavLink>
           </li>
           <li>

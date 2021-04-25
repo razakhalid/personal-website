@@ -11,19 +11,20 @@ export default function Home() {
         </div>
         <div className="text-body">
           <h1 className="title-medium">
-            I'm a Front End Developer and UX Designer with 2+ years of
-            professional experience. Welcome to my website!
+            I'm a User-Experience Designer and Front End Engineer based out of
+            Minneapolis, MN. 3 of my strongest passions are fitness, music and
+            design. Welcome to my website!
           </h1>
         </div>
         <div className="btn-wrapper">
           <Link to="/contact">
-            <button className="btn btn-colored">Let's Talk</button>
+            <button className="btn">Let's Talk</button>
           </Link>
         </div>
       </div>
 
       <div className="img-wrapper">
-        <img src={raza} />
+        <img className="img" src={raza} alt="" />
       </div>
     </>
   );
