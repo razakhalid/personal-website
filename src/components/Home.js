@@ -11,7 +11,7 @@ export default function Home() {
         </div>
         <div className="text-body">
           <h1 className="title-medium">
-            I'm a User-Experience Designer and Front End Engineer based out of
+            I'm a UX Designer and Front End Engineer based out of
             Minneapolis, MN. 3 of my strongest passions are fitness, music and
             design. Welcome to my website!
           </h1>
