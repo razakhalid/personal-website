@@ -7,7 +7,44 @@
             document.getElementById(button.dataset.id).classList.add("active");
         })
     });
-    document.querySelector(".theme-btn").addEventListener("click", () => {
-        document.body.classList.toggle("light-mode");
+
+    const carousels = document.querySelectorAll("[data-carousel]");
+
+    carousels.forEach(carousel => {
+        const buttons = carousel.querySelectorAll("[data-carousel-btn]");
+        const imgHeight = carousel
+            .querySelector("[data-active]")
+            .querySelector("img")
+            .offsetHeight;
+
+        carousel.querySelector("[data-carousel-slides]").style.height = imgHeight + "px";
+
+        buttons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const offset = btn.dataset.carouselBtn === "left" ? -1 : 1;
+                const slides = btn
+                    .closest("[data-carousel]")
+                    .querySelector("[data-carousel-slides]");
+
+                const activeSlide = slides.querySelector("[data-active]");
+                let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+
+                if (newIndex < 0) newIndex = slides.children.length - 1;
+                if (newIndex >= slides.children.length) newIndex = 0;
+
+                slides.children[newIndex].dataset.active = true;
+                delete activeSlide.dataset.active;
+            });
+        })
     })
+
+    window.addEventListener("resize", () => {
+        carousels.forEach(carousel => {
+            const imgHeight = carousel
+                .querySelector("[data-active]")
+                .querySelector("img")
+                .offsetHeight;
+            carousel.querySelector("[data-carousel-slides]").style.height = imgHeight + "px";
+        })
+    });
 })();
