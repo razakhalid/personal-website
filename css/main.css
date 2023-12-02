@@ -19,7 +19,7 @@
     --color-grey-6: #12181b;
     --br-sm-2: 14px;
     --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
-    --box-shadow-2: 0 3px 15px rgba(0,0,0,.03);
+    --box-shadow-2: 0 3px 15px rgba(0,0,0,.1);
 }
 
 .light-mode {
@@ -88,12 +88,12 @@ section {
 nav {
     display: flex;
     justify-content: center;
-    position: absolute;
     top: 0;
     width: 100%;
     z-index: 10;
     background-color: var(--color-primary);
-    box-shadow: var(--box-shadow-2);
+    border-bottom: 1px solid rgb(202,202,213);
+    position: sticky;
 }
 
 .nav-items {
@@ -712,21 +712,35 @@ nav {
     padding-left: 0;
 }
 
+.carousels-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
 .carousel {
     position: relative;
     width: 100%;
+    border: 1px solid rgb(202,202,213);
+    padding: 1.5rem .85rem;
+    border-radius: var(--br-sm-2);
+    box-shadow: var(--box-shadow-2);
 }
 
 .carousel .slides {
-    display: flex;
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .carousel .slide {
     opacity: 0;
-    transition: 200ms opacity ease-in-out;
+    transition: 400ms opacity ease-in-out;
     transition-delay: 100ms;
     position: absolute;
+    /*max-width: 500px;*/
+    height: 300px;
 }
 
 .carousel .slide[data-active] {
@@ -735,6 +749,7 @@ nav {
 
 .carousel .slide img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
 }
