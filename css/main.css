@@ -175,7 +175,7 @@ nav {
 .header-content {
     display: flex;
     justify-content: center;
-    margin-top: 8rem;
+    margin-top: 5rem;
 }
 
 .header-content .left .image {
@@ -207,11 +207,12 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*padding-right: 18rem;*/
-    /*max-width: 650px;*/
 }
 .header-content .right .name {
     font-size: 3rem;
+}
+.header-content .right i {
+    margin-right: .5rem;
 }
 .header-content .right-header .name span {
     color: var(--color-secondary);
@@ -556,23 +557,25 @@ nav {
     margin: 1rem 0;
     line-height: 2rem;
 }
-.contact-content-con .left-contact .contact-info .contact-item {
+.contact-content-con .left-contact .contact-info {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+}
+.contact-content-con .left-contact .contact-info .contact-item {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
 }
 .contact-content-con .left-contact .contact-info .contact-item p {
     margin: 0.3rem 0 !important;
     padding: 0 !important;
 }
-.contact-content-con .left-contact .contact-info .contact-item .icon {
-    display: grid;
-    grid-template-columns: 40px 1fr;
-}
 .contact-content-con .left-contact .contact-info .contact-item .icon i {
     display: flex;
     align-items: center;
     font-size: 1.3rem;
+    transform: translateY(.15rem);
+    margin-right: 1rem
 }
 .contact-content-con .left-contact .contact-icon {
     display: flex;
