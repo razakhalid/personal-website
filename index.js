@@ -16,14 +16,14 @@ carousels.forEach(carousel => {
         .querySelector("img")
         .offsetHeight;
 
-    carousel.querySelector("[data-carousel-slides]").style.height = imgHeight + "px";
+    // carousel.querySelector("[data-carousel-slides]").style.height = imgHeight + "px";
 
-    setInterval(() => {
-        changeSlide({
-            slides: carousel.querySelector("[data-carousel-slides]"),
-            offset: 1
-        })
-    }, 5000);
+    // setInterval(() => {
+    //     changeSlide({
+    //         slides: carousel.querySelector("[data-carousel-slides]"),
+    //         offset: 1
+    //     })
+    // }, 7000);
 
     buttons.forEach(btn => {
         btn.addEventListener("click", () => {
@@ -49,12 +49,12 @@ function changeSlide(options = {}) {
     delete activeSlide.dataset.active;
 }
 
-window.addEventListener("resize", () => {
-    carousels.forEach(carousel => {
-        const imgHeight = carousel
-            .querySelector("[data-active]")
-            .querySelector("img")
-            .offsetHeight;
-        carousel.querySelector("[data-carousel-slides]").style.height = imgHeight + "px";
-    })
-});
+// window.addEventListener("resize", () => {
+//     carousels.forEach(carousel => {
+//         const imgHeight = carousel
+//             .querySelector("[data-active]")
+//             .querySelector("img")
+//             .offsetHeight;
+//         carousel.querySelector("[data-carousel-slides]").style.height = imgHeight + "px";
+//     })
+// });
