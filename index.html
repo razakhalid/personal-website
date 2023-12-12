@@ -45,12 +45,12 @@
         </nav>
         <header class="container header active" id="about">
             <div class="header-content">
-                <div class="left">
+                <div class="tagline-container">
                     <h1 class="tagline">
-                        <i class="fas fa-quote-left"></i>
+<!--                        <i class="fas fa-quote-left"></i>-->
                         <span class="u-highlight">More</span>
                         than just a developer
-                        <i class="fas fa-quote-right"></i>
+<!--                        <i class="fas fa-quote-right"></i>-->
                     </h1>
                     <p>You'll need someone with more than just coding skills to delight your customers, someone like me.</p>
                     <!--                <h1 class="name">-->
@@ -59,15 +59,68 @@
 
             
                     <div class="btn-con">
-                        <a href="" class="btn secondary">
-                            Experience
-                        </a>
                         <a href="#work" class="btn primary">
                             Past Work
                         </a>
                     </div>
                 </div>
- 
+                <div class="carousel-container">
+                    <div class="carousel" data-carousel>
+                        <a class="btn left" data-carousel-btn="left">
+                            <i class="fas fa-angle-left"></i>
+                        </a>
+                        <a class="btn right" data-carousel-btn="right">
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                        <ul class="slides" data-carousel-slides>
+                            <li class="slide" data-active>
+                                <div class="caption-container">
+                                    <h2>Plan Recommendation Wizard</h2>
+                                </div>
+                    
+                                <div class="image-container">
+                                    <img src="img/projects/consultative-plan-1.png" alt="">
+                                </div>
+                            </li>
+                            <li class="slide">
+                                <div class="caption-container">
+                                    <h2>Verification Request</h2>
+                                </div>
+                    
+                                <div class="image-container">
+                                    <img src="img/projects/verification-request-1.png" alt="">
+                                </div>
+                            </li>
+                            <li class="slide">
+                                <div class="caption-container">
+                                    <h2>Verification Progress Tracker</h2>
+                                </div>
+        
+                                <div class="image-container">
+                                    <img src="img/projects/verification-flow-stepper.png" alt="">
+                                </div>
+                            </li>
+                            <li class="slide">
+                                <div class="caption-container">
+                                    <h2>ID Submission for Verification</h2>
+                                </div>
+        
+                                <div class="image-container">
+                                    <img src="img/projects/verification-flow-2.png" alt="">
+                                </div>
+                            </li>
+                            <li class="slide">
+                                <div class="caption-container">
+                                    <h2>In-Browser Selfie Photo for Verification</h2>
+                                </div>
+        
+                                <div class="image-container">
+                                    <img src="img/projects/verification-flow-6.png" alt="">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <!--            <section class="container skills" id="skills">-->
             <!--                <div class="main-title">-->
@@ -243,7 +296,7 @@
             <!--                </div>-->
             <!--            </section>-->
         </header>
-        <div id="work">
+        <section class="container past-work" id="past-work">
             <div class="main-title">
                 <h2>Past Work</h2>
             </div>
@@ -251,176 +304,25 @@
                 Check out what I designed & built for <a href="https://tokenoftrust.com/" target="_blank">Token of Trust</a>,
                 an online age and identity verification company based in Minneapolis, MN.
             </p>
-            <div class="carousels-container">
-                <div class="carousel" data-carousel>
-                    <a class="btn left" data-carousel-btn="left">
-                        <i class="fas fa-angle-left"></i>
-                    </a>
-                    <a class="btn right" data-carousel-btn="right">
-                        <i class="fas fa-angle-right"></i>
-                    </a>
-                    <ul class="slides" data-carousel-slides>
-                        <li class="slide" data-active>
-                            <div class="left">
-                                <h2>Plan Recommendation Wizard</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolore harum illum labore nam officia.</p>
-                            </div>
-                            
-                            <div class="right">
-                                <img src="img/projects/consultative-plan-1.png" alt="">
-                                <img src="img/projects/plan-selection-clipped.png" alt="" style="transform: translateY(-.5rem)">
-                            </div>
-                        </li>
-                        <li class="slide">
-                            <div class="left">
-                                <h2>Verification Dashboard</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolore harum illum labore nam officia.</p>
-                            </div>
-    
-                            <div class="right">
-                                <img src="img/projects/verification-request-1.png" alt="">
-                                <img src="img/projects/verifications-home-1.png" alt="">
-                            </div>
-                        </li>
-                    </ul>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="images-container">
+                        <div class="image">
+                            <img src="img/projects/consultative-plan-1.png" alt="">
+                        </div>
+                        <div class="image">
+                            <img src="img/projects/consultative-plan-2.png" alt="">
+                        </div>
+                        <div class="image">
+                            <img src="img/projects/consultative-plan-3.png" alt="">
+                        </div>
+                        <div class="image">
+                            <img src="img/projects/plan-selection-clipped.png" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!--            <div class="portfolios">-->
-            <!--                <div class="portfolio-item">-->
-            <!--                    <div class="image">-->
-            <!--                        <img src="img/port1.jpg" alt="">-->
-            <!--                    </div>-->
-            <!--                    <div class="hover-items">-->
-            <!--                        <h3>Project Source</h3>-->
-            <!--                        <div class="icons">-->
-            <!--                            <a href="#" class="icon">-->
-            <!--                                <i class="fab fa-github"></i>-->
-            <!--                            </a>-->
-            <!--                            <a href="#" class="icon">-->
-            <!--                                <i class="fab fa-behance"></i>-->
-            <!--                            </a>-->
-            <!--                            <a href="#" class="icon">-->
-            <!--                                <i class="fab fa-youtube"></i>-->
-            <!--                            </a>-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--                <div class="portfolio-item">-->
-            <!--                    <div class="image">-->
-            <!--                        <img src="img/port2.jpg" alt="">-->
-            <!--                    </div>-->
-            <!--                    <div class="hover-items">-->
-            <!--                        <h3>Project Source</h3>-->
-            <!--                        <div class="icons">-->
-            <!--                            <a href="#" class="icon">-->
-            <!--                                <i class="fab fa-github"></i>-->
-            <!--                            </a>-->
-            <!--                            <a href="#" class="icon">-->
-            <!--                                <i class="fab fa-behance"></i>-->
-            <!--                            </a>-->
-            <!--                            <a href="#" class="icon">-->
-            <!--                                <i class="fab fa-youtube"></i>-->
-            <!--                            </a>-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--                <div class="portfolio-item">-->
-            <!--                    <div class="image">-->
-            <!--                        <img src="img/port3.jpg" alt="">-->
-            <!--                    </div>-->
-            <!--                    <div class="hover-items">-->
-            <!--                        <h3>Project Source</h3>-->
-            <!--                        <div class="icons">-->
-            <!--                            <a href="#" class="icon">-->
-            <!--                                <i class="fab fa-github"></i>-->
-            <!--                            </a>-->
-            <!--                            <a href="#" class="icon">-->
-            <!--                                <i class="fab fa-behance"></i>-->
-            <!--                            </a>-->
-            <!--                            <a href="#" class="icon">-->
-            <!--                                <i class="fab fa-youtube"></i>-->
-            <!--                            </a>-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--                <div class="portfolio-item">-->
-            <!--                    <div class="image">-->
-            <!--                        <img src="img/port4.jpg" alt="">-->
-            <!--                    </div>-->
-            <!--                    <div class="hover-items">-->
-            <!--                        <h3>Project Source</h3>-->
-            <!--                        <div class="icons">-->
-            <!--                            <a href="#" class="icon">-->
-            <!--                                <i class="fab fa-github"></i>-->
-            <!--                            </a>-->
-            <!--                            <a href="#" class="icon">-->
-            <!--                                <i class="fab fa-behance"></i>-->
-            <!--                            </a>-->
-            <!--                            <a href="#" class="icon">-->
-            <!--                                <i class="fab fa-youtube"></i>-->
-            <!--                            </a>-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--                <div class="portfolio-item">-->
-            <!--                    <div class="image">-->
-            <!--                        <img src="img/port5.jpg" alt="">-->
-            <!--                    </div>-->
-            <!--                    <div class="hover-items">-->
-            <!--                        <h3>Project Source</h3>-->
-            <!--                        <div class="icons">-->
-            <!--                            <a href="#" class="icon">-->
-            <!--                                <i class="fab fa-github"></i>-->
-            <!--                            </a>-->
-            <!--                            <a href="#" class="icon">-->
-            <!--                                <i class="fab fa-behance"></i>-->
-            <!--                            </a>-->
-            <!--                            <a href="#" class="icon">-->
-            <!--                                <i class="fab fa-youtube"></i>-->
-            <!--                            </a>-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--                <div class="portfolio-item">-->
-            <!--                    <div class="image">-->
-            <!--                        <img src="img/port2.jpg" alt="">-->
-            <!--                    </div>-->
-            <!--                    <div class="hover-items">-->
-            <!--                        <h3>Project Source</h3>-->
-            <!--                        <div class="icons">-->
-            <!--                            <a href="#" class="icon">-->
-            <!--                                <i class="fab fa-github"></i>-->
-            <!--                            </a>-->
-            <!--                            <a href="#" class="icon">-->
-            <!--                                <i class="fab fa-behance"></i>-->
-            <!--                            </a>-->
-            <!--                            <a href="#" class="icon">-->
-            <!--                                <i class="fab fa-youtube"></i>-->
-            <!--                            </a>-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--                <div class="portfolio-item">-->
-            <!--                    <div class="image">-->
-            <!--                        <img src="img/port7.jpg" alt="">-->
-            <!--                    </div>-->
-            <!--                    <div class="hover-items">-->
-            <!--                        <h3>Project Source</h3>-->
-            <!--                        <div class="icons">-->
-            <!--                            <a href="#" class="icon">-->
-            <!--                                <i class="fab fa-github"></i>-->
-            <!--                            </a>-->
-            <!--                            <a href="#" class="icon">-->
-            <!--                                <i class="fab fa-behance"></i>-->
-            <!--                            </a>-->
-            <!--                            <a href="#" class="icon">-->
-            <!--                                <i class="fab fa-youtube"></i>-->
-            <!--                            </a>-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--            </div>-->
-        </div>
+        </section>
         <main>
 <!--        <section class="container" id="resume">-->
 <!--            <div class="blogs-content">-->
