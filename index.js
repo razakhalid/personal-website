@@ -18,12 +18,12 @@ carousels.forEach(carousel => {
 
     // carousel.querySelector("[data-carousel-slides]").style.height = imgHeight + "px";
 
-    // setInterval(() => {
-    //     changeSlide({
-    //         slides: carousel.querySelector("[data-carousel-slides]"),
-    //         offset: 1
-    //     })
-    // }, 7000);
+    setInterval(() => {
+        changeSlide({
+            slides: carousel.querySelector("[data-carousel-slides]"),
+            offset: 1
+        })
+    }, 7000);
 
     buttons.forEach(btn => {
         btn.addEventListener("click", () => {
