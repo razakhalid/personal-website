@@ -229,7 +229,6 @@ nav {
 
 /* Work */
 .work .disclaimer {
-    max-width: 65vw;
     opacity: 0.7;
 }
 .work .item {
@@ -626,12 +625,12 @@ footer {
     margin: 0 1rem;
 }
 
-a {
+.link {
     color: var(--color-primary);
     font-weight: bold;
 }
 
-a:hover {
+.link:hover {
     text-decoration: underline;
     cursor: pointer;
 }
