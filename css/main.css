@@ -45,12 +45,13 @@ a {
     font-family: inherit;
 }
 
-header {
+
+.header {
     color: var(--color-grey-4);
     padding: 0 !important;
 }
 
-header .carousel-container {
+.header .carousel-container {
     margin-top: var(--gap-lg);
 }
 
@@ -68,9 +69,11 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 1300px;
+    margin: auto;
 }
 
-.container.work {
+.work {
     background: var(--color-grey-3);
 }
 
@@ -166,23 +169,23 @@ nav {
 }
 
 /*Header-content*/
-header {
-    margin: 5rem var(--gap-md);
+.header {
+    margin: 5rem auto;
     text-align: center;
 }
-header .tagline-container .tagline {
+.header .tagline-container .tagline {
     font-size: 3rem;
 }
-header .tagline-container i {
+.header .tagline-container i {
     margin-right: .5rem;
 }
-header .tagline-container p {
+.header .tagline-container p {
     margin-top: 1rem;
 }
-header .tagline span {
+.header .tagline span {
     color: var(--color-primary);
 }
-header .right-header p {
+.header .right-header p {
     margin: 1.5rem 0;
     line-height: 2rem;
 }
@@ -262,7 +265,7 @@ header .right-header p {
 }
 
 /*About*/
-footer {
+.about {
     color: var(--color-white);
     padding: var(--gap-md) 1rem var(--gap-lg) 1rem;
     background-color: var(--color-grey-4);
@@ -454,7 +457,7 @@ footer {
 
 .carousel .slide .image-container {
     height: 100%;
-    width: 50%;
+    /*width: 50%;*/
     /*background-color: rgb(248,247,242);*/
     display: flex;
     align-items: center;
@@ -462,7 +465,8 @@ footer {
 }
 
 .carousel .slide img {
-    height: 90%;
+    width: 100%;
+    max-height: 100%;
     object-fit: cover;
     object-position: center;
 }
@@ -484,10 +488,10 @@ footer {
 
 @media (min-width: 1500px) {
     .nav-items, section, .carousel-container {
-        max-width: 1300px;
+        /*max-width: 1300px;*/
     }
     section {
-        margin: auto;
+        width: 100%;
     }
 }
 
@@ -580,4 +584,8 @@ footer {
 /* LAYOUT */
 .u-mt-sm {
     margin-top: var(--gap-sm);
+}
+
+.u-pad-sm {
+    padding: var(--gap-sm);
 }
