@@ -1,12 +1,3 @@
-[...document.querySelectorAll(".control")].forEach(button => {
-    button.addEventListener("click", function() {
-        document.querySelector(".active-btn").classList.remove("active-btn");
-        this.classList.add("active-btn");
-        document.querySelector(".active").classList.remove("active");
-        document.getElementById(button.dataset.id).classList.add("active");
-    })
-});
-
 const carousels = document.querySelectorAll("[data-carousel]");
 
 carousels.forEach(carousel => {
@@ -46,13 +37,3 @@ function changeSlide(options = {}) {
     slides.children[newIndex].dataset.active = true;
     delete activeSlide.dataset.active;
 }
-
-// window.addEventListener("resize", () => {
-//     carousels.forEach(carousel => {
-//         const imgHeight = carousel
-//             .querySelector("[data-active]")
-//             .querySelector("img")
-//             .offsetHeight;
-//         carousel.querySelector("[data-carousel-slides]").style.height = imgHeight + "px";
-//     })
-// });

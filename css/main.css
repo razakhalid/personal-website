@@ -1,3 +1,5 @@
+@import './utils/_layout.css';
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +10,8 @@
 :root {
     --color-white: #FFFFFF;
     --color-primary: #f0b70f;
-    --color-black: #000;
+    --color-black-1: #000;
+    --color-black-2: rgb(54,55,53);
     --color-grey0: #f8f8f8;
     --color-grey-1: #6c7983;
     --color-grey-2: #6c7983;
@@ -18,9 +21,11 @@
     --color-grey-6: #12181b;
     --color-offwhite-1: rgb(248,247,242);
     --br-1: .5rem;
-    --br-grey-1: rgb(230,231,235) 1px solid;
+    --bd-grey-1: rgb(230,231,235) 1px solid;
+    --bd-grey-2: rgb(202,202,213) 1px solid;
     --box-shadow-1: 0 3px 15px rgba(0,0,0,.1);
     --box-shadow-2: 0 3px 15px rgba(0,0,0,.05);
+    --gap-xs: 0.5rem;
     --gap-sm: 1.15rem;
     --gap-md: 2.3rem;
     --gap-lg: 4.6rem;
@@ -109,8 +114,8 @@ nav {
     margin: 0 var(--gap-md);
 }
 
-.nav-items .logo img {
-    max-width: 100px;
+.nav-items .image {
+    max-height: 40px;
     margin: .85rem;
 }
 
@@ -195,7 +200,7 @@ nav {
     width: 225px;
     height: 225px;
     margin: var(--gap-md) 0;
-    background-color: var(--color-black);
+    background-color: var(--color-black-1);
     transition: all 0.4s ease-in-out;
 
 }
@@ -210,28 +215,19 @@ nav {
 }
 
 /* Work */
-.work .disclaimer {
+.disclaimer {
     opacity: 0.7;
 }
-.work .item {
-    width: 100%;
-    border-radius: var(--br-1);
-    background: var(--color-white);
-    box-shadow: var(--box-shadow-2);
-    margin-top: var(--gap-md);
-}
 
-.work .item .content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.content {
     padding: var(--gap-md);
 }
 
-.work .item .details-container {
+.details-container {
     padding: 0 var(--gap-md);
 }
 
-.work .item .details-container h3 {
+.details-container h3 {
     margin-top: var(--gap-sm);
 }
 
@@ -242,7 +238,7 @@ nav {
     gap: var(--gap-md);
 }
 .cards-grid .card {
-    border: var(--br-grey-1);
+    border: var(--bd-grey-1);
     border-radius: var(--br-1);
     /*padding: var(--gap-md);*/
 }
@@ -257,11 +253,19 @@ nav {
 .cards-grid .card .images-container .image {
     max-width: 300px;
 }
-.cards-grid .card .images-container .image img {
+img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+.skills .image {
+    max-width: 3rem;
+    max-height: 2rem;
+}
+.skill {
+    width: 12rem;
 }
 
 /*About*/
@@ -457,8 +461,6 @@ nav {
 
 .carousel .slide .image-container {
     height: 100%;
-    /*width: 50%;*/
-    /*background-color: rgb(248,247,242);*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -564,7 +566,27 @@ nav {
 
 /* Utility Classes */
 
-/* FONT & TEXT */
+/* COLORS */
+.u-bg-grey-3 {
+    background-color: var(--color-grey-3);
+}
+.u-bg-white {
+    background-color: var(--color-white);
+}
+
+/* BORDERS */
+.u-bd-grey-1 {
+    border: var(--bd-grey-1);
+}
+.u-bd-grey-2 {
+    border: var(--bd-grey-2);
+}
+
+.u-br-1 {
+    border-radius: var(--br-1);
+}
+
+/* FONT */
 .u-highlight {
     color: var(--color-primary);
 }
@@ -581,11 +603,3 @@ nav {
     font-weight: bold;
 }
 
-/* LAYOUT */
-.u-mt-sm {
-    margin-top: var(--gap-sm);
-}
-
-.u-pad-sm {
-    padding: var(--gap-sm);
-}
