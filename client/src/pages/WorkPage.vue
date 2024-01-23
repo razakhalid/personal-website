@@ -35,15 +35,15 @@ export default {
       workItems: [
         {
           label: "Plan Recommendation Wizard",
-          src: "../../public/img/projects/consultative-plan-1.png"
+          src: "/img/projects/consultative-plan-1.png"
         },
         {
           label: "Quick & Easy Product Demo",
-          src: "../../public/img/projects/demo-4.jpeg"
+          src: "/img/projects/demo-4.jpeg"
         },
         {
           label: "Verification Progress Tracker",
-          src: "../../public/img/projects/verification-flow-stepper.png"
+          src: "/img/projects/verification-flow-stepper.png"
         }
       ]
     }
