@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* custom fonts */
+.font-exo {
+    font-family: 'Exo 2', sans-serif;
+}
+.font-space-mono {
+    font-family: 'Space Mono', monospace;
+}

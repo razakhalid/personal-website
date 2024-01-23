@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "npx tailwindcss -i src/input.css -o src/output.css --watch & vite",
+    "dev": "vite & npx tailwindcss -i src/input.css -o src/output.css --watch",
     "build": "npx tailwindcss -i src/input.css -o src/output.css && vite build",
     "preview": "vite preview"
   },
