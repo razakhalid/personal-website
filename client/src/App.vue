@@ -3,294 +3,318 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <nav>
-    <div class="nav-items">
-      <div class="image logo">
-        <img src="../public/img/logo.png" alt="">
-      </div>
-      <div class="controls">
-        <div class="control">
-          <a href="#work">Past Work</a>
-        </div>
-        <div class="control">
-          <a href="#about">Contact</a>
-        </div>
-      </div>
+  <div>
+    <div
+        class="absolute text-white text-center"
+        style="top: 50%; left: 50%; transform: translate(-50%, -50%);"
+        id="container"
+    >
+      <h1
+          class="font-space-mono text-sm uppercase tracking-wide opacity-0"
+          id="main-header"
+          style="transform: translateY(30px);"
+      >Raza Khalid</h1>
+      <p
+          id="tagline"
+          class="font-exo text-4xl opacity-0"
+          style="transform: translateY(30px);"
+      >MORE THAN JUST A DEVELOPER</p>
+      <a
+          id="primary-cta"
+          class="border px-4 py-2 rounded-lg text-sm font-space-mono uppercase mt-8 inline-block opacity-0
+                    hover:bg-white hover:text-gray-800 hover:cursor-pointer"
+          style="transform: translateY(30px);"
+      >
+        View Work</a>
     </div>
-  </nav>
-  <main>
-    <section class="header">
-      <div class="container header">
-        <div class="tagline-container">
-          <h1 class="tagline">
-            <span class="u-highlight">More</span> than just a developer
-          </h1>
-          <p>You'll need someone with more than just coding skills to delight your customers, someone like me.</p>
-
-          <div class="btn-con">
-            <a href="#work" class="btn primary">
-              Past Work
-            </a>
-          </div>
-        </div>
-
-        <!--Header Carousel-->
-        <div class="carousel-container">
-          <div class="carousel" data-carousel>
-            <a class="btn left" data-carousel-btn="left">
-              <i class="fas fa-angle-left"></i>
-            </a>
-            <a class="btn right" data-carousel-btn="right">
-              <i class="fas fa-angle-right"></i>
-            </a>
-            <ul class="slides" data-carousel-slides>
-              <li class="slide" data-active>
-                <div class="caption-container">
-                  <h2>Plan Recommendation Wizard</h2>
-                  <a class="link u-highlight u-text-bold" href="#plan-recommendation-wizard">Learn More &rarr;</a>
-                </div>
-
-                <div class="image-container">
-                  <img src="../public/img/projects/consultative-plan-1.png" alt="">
-                </div>
-              </li>
-              <li class="slide">
-                <div class="caption-container">
-                  <h2>Verification Progress Tracker</h2>
-                  <a class="link u-highlight u-text-bold" href="#verification-progress-tracker">Learn More &rarr;</a>
-                </div>
-
-                <div class="image-container u-pad-sm">
-                  <img src="../public/img/projects/verification-flow-stepper.png" alt="">
-                </div>
-              </li>
-              <li class="slide">
-                <div class="caption-container">
-                  <h2>Quick and Easy Product Demo</h2>
-                  <a class="link u-highlight u-text-bold" href="#verification-progress-tracker">Learn More &rarr;</a>
-                </div>
-
-                <div class="image-container u-pad-sm">
-                  <img src="../public/img/projects/demo-4.jpeg" alt="">
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="work" id="work">
-      <div class="container">
-        <div class="main-title">
-          <h2>Past Work</h2>
-        </div>
-        <p class="u-mt-sm u-text-center">
-          Here's some of the front end design & development work I did for
-          <a class="link u-highlight" href="https://tokenoftrust.com/" target="_blank">Token of Trust</a>,
-          an online age and identity verification company based in Minneapolis, MN.
-        </p>
-        <div class="marker disclaimer u-mt-sm" id="plan-recommendation-wizard">
-          <p class="u-text-center u-text-small">
-            Disclaimer: All screenshots on this website that show user interfaces are the intellectual property
-            of Token of Trust (TOT, Inc). The developer of this website (Raza Khalid) has obtained explicit permission
-            from the CEO of TOT, Inc to use these (publicly accessible) screenshots as work samples for his portfolio
-            and has no rights or ownership over them.
-          </p>
-        </div>
-        <div class="u-full-width u-br-1 u-bg-white u-mt-md u-bs-2">
-          <div class="content u-grid" columns="2">
-            <div class="carousel-container">
-              <div class="carousel" data-carousel>
-                <a class="btn left" data-carousel-btn="left">
-                  <i class="fas fa-angle-left"></i>
-                </a>
-                <a class="btn right" data-carousel-btn="right">
-                  <i class="fas fa-angle-right"></i>
-                </a>
-                <ul class="slides" data-carousel-slides>
-                  <li class="slide" data-active>
-                    <div class="image-container">
-                      <img src="../public/img/projects/consultative-plan-1.png" alt="">
-                    </div>
-                  </li>
-                  <li class="slide">
-                    <div class="image-container">
-                      <img src="../public/img/projects/consultative-plan-2.png" alt="">
-                    </div>
-                  </li>
-                  <li class="slide">
-                    <div class="image-container">
-                      <img src="../public/img/projects/consultative-plan-3.png" alt="">
-                    </div>
-                  </li>
-                  <li class="slide">
-                    <div class="image-container">
-                      <img src="../public/img/projects/plan-selection-1.png" alt="">
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="details-container">
-              <div class="title">
-                <h2>Plan Recommendation Wizard</h2>
-              </div>
-              <div class="body">
-
-                <h3>Business Problem</h3>
-                <p class="u-text-small">
-                  A 30% time cost to the sales team in talking to new users and recommending the right
-                  product configuration for them.
-                </p>
-
-                <h3>Solution</h3>
-                <p class="u-text-small">
-                  A feature that asks the user a series of questions to understand the nature of their
-                  business and uses their responses to offer a recommendation for what plan would
-                  be best suited to their needs.
-                </p>
-
-                <h3>Impact</h3>
-                <p class="u-text-small">
-                  The time spent by the sales team in performing this task dropped down to around 15%.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="marker" id="demo"></div>
-        <div class="u-full-width u-br-1 u-bg-white u-mt-md">
-          <div class="content u-grid" columns="2">
-            <div class="carousel-container">
-              <div class="carousel" data-carousel>
-                <a class="btn left" data-carousel-btn="left">
-                  <i class="fas fa-angle-left"></i>
-                </a>
-                <a class="btn right" data-carousel-btn="right">
-                  <i class="fas fa-angle-right"></i>
-                </a>
-                <ul class="slides" data-carousel-slides>
-                  <li class="slide u-pad-sm" data-active>
-                    <div class="image-container">
-                      <img src="../public/img/projects/demo-1.png" alt="">
-                    </div>
-                  </li>
-                  <li class="slide u-pad-sm">
-                    <div class="image-container">
-                      <img src="../public/img/projects/demo-2.png" alt="">
-                    </div>
-                  </li>
-                  <li class="slide u-pad-sm">
-                    <div class="image-container">
-                      <img src="../public/img/projects/demo-3.jpeg" alt="">
-                    </div>
-                  </li>
-                  <li class="slide u-pad-sm">
-                    <div class="image-container">
-                      <img src="../public/img/projects/demo-4.jpeg" alt="">
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="details-container">
-              <div class="title">
-                <h2>Quick and Easy Product Demo</h2>
-              </div>
-              <div class="body">
-                <h3>Business Problem</h3>
-                <p class="u-text-small">
-                  There was no quick and easy way for new users to try the ID verification product.
-                  They had to choose and sign up for a plan to be able to do this, causing a large
-                  number of them to abandon the product altogether.
-                </p>
-
-                <h3>Solution</h3>
-                <p class="u-text-small">
-                  A product demo modal that renders on the home page of the client portal right
-                  after a user creates an account and is logged in, allowing them to try the product.
-                </p>
-
-                <h3>Impact</h3>
-                <p class="u-text-small">
-                  We saw a significant uptick in the number of new users engaging with the product
-                  and discussing pricing options with the sales team.
-                </p>
-                <!--                        Technologies & Skills -->
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="marker" id="verification-progress-tracker"></div>
-        <div class="u-full-width u-br-1 u-bg-white u-mt-md">
-          <div class="content u-grid" columns="2">
-            <div class="carousel-container">
-              <div class="carousel">
-                <ul class="slides">
-                  <li class="slide u-pad-sm" data-active>
-                    <div class="image-container">
-                      <img src="../public/img/projects/verification-flow-stepper.png" alt="">
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="details-container">
-              <div class="title">
-                <h2>Verification Progress Tracker</h2>
-              </div>
-              <div class="body">
-
-                <h3>Business Problem</h3>
-                <p class="u-text-small">
-                  Numerous user complaints (via support tickets) about having to wait too long to get
-                  "verified" via manual review after submitting their ID without a completion time estimate.
-                </p>
-
-                <h3>Solution</h3>
-                <p class="u-text-small">
-                  A progress tracker that reflects the status of the manual review of their ID in
-                  real-time.
-                </p>
-
-                <h3>Impact</h3>
-                <p class="u-text-small">
-                  This dramatically reduced the number of user complaints via support tickets by 80%
-                  and increased the weekly number of "cleared" users by 6%.
-                </p>
-                <!--                        Technologies & Skills -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="about" id="about">
-      <div class="container">
-        <h2 class="main-title">CONTACT</h2>
-        <div class="profile-photo">
-          <img src="../public/img/profile-photo%20(1).jpeg" alt="">
-        </div>
-        <div class="contact">
-          <div class="contact-icons">
-            <a href="https://www.linkedin.com/in/raza-khalid/" target="_blank">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/razakhalid" target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
-          <div class="contact-info">
-            <i class="fas fa-envelope"></i>
-            <a class="link" href="mailto:ra97za@gmail.com">ra97za@gmail.com</a>
-            <i class="fas fa-map-marker-alt"></i><span>Minneapolis, MN, USA</span>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <RouterView />
+    <RouterView />
+  </div>
 </template>
+<script>
+import * as THREE from 'three';
+import * as dat from 'dat.gui';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import gsap from 'gsap';
+export default {
+  name: 'App',
+  mounted() {
+    // initial setup
+    const raycaster = new THREE.Raycaster();
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75,
+        innerWidth / innerHeight,
+        0.1,
+        1000
+    );
+    const renderer = new THREE.WebGLRenderer();
 
-<style src="./assets/css/main.css"></style>
+// setup dat gui
+    const gui = new dat.GUI();
+    const world = {
+      plane: {
+        width: 400,
+        height: 400,
+        widthSegments: 50,
+        heightSegments: 50
+      }
+    };
+    gui.add(world.plane, 'width', 1, 500).onChange(generatePlane);
+    gui.add(world.plane, 'height', 1, 500).onChange(generatePlane);
+    gui.add(world.plane, 'widthSegments', 1, 100).onChange(generatePlane);
+    gui.add(world.plane, 'heightSegments', 1, 100).onChange(generatePlane);
+
+    function generatePlane() {
+      planeMesh.geometry.dispose();
+      planeMesh.geometry = new THREE.PlaneGeometry(
+          world.plane.width,
+          world.plane.height,
+          world.plane.widthSegments,
+          world.plane.heightSegments
+      );
+
+      // randomize vertex position
+      const { array } = planeMesh.geometry.attributes.position;
+      const randomValues = [];
+      for (let i = 0; i < array.length; i++) {
+
+        if (i % 3 === 0) {
+          const x = array[i];
+          const y = array[i + 1];
+          const z = array[i + 2];
+
+          array[i] = x + ((Math.random() - 0.5) * 3);
+          array[i + 1] = y + ((Math.random() - 0.5) * 3);
+          array[i + 2] = z + ((Math.random() - 0.5) * 3);
+        }
+
+        randomValues.push(Math.random() * Math.PI * 2);
+      }
+
+      planeMesh.geometry.attributes.position.randomValues = randomValues;
+      planeMesh.geometry.attributes.position.originalPosition = planeMesh.geometry.attributes.position.array;
+
+      const colors = [];
+      const { count } = planeMesh.geometry.attributes.position;
+      for (let i = 0; i < count; i++) {
+        colors.push(0, 0.19, 0.4);
+      }
+
+      planeMesh.geometry.setAttribute(
+          'color',
+          new THREE.BufferAttribute(new
+          Float32Array(colors), 3)
+      );
+    }
+
+    renderer.setSize(innerWidth, innerHeight);
+    renderer.setPixelRatio(devicePixelRatio);
+    document.body.appendChild(renderer.domElement);
+
+    new OrbitControls(camera, renderer.domElement);
+
+// set camera position
+    camera.position.z = 50;
+
+    const planeGeometry = new THREE.PlaneGeometry(
+        world.plane.width,
+        world.plane.height,
+        world.plane.widthSegments,
+        world.plane.heightSegments
+    );
+
+    const planeMaterial = new THREE.MeshPhongMaterial({
+      side: THREE.DoubleSide,
+      flatShading: true,
+      vertexColors: true
+    });
+
+    const planeMesh = new THREE.Mesh(
+        planeGeometry,
+        planeMaterial
+    );
+
+    scene.add(planeMesh);
+
+    generatePlane();
+
+    const light = new THREE.DirectionalLight(
+        0xffffff,
+        1
+    );
+    light.position.set(0, 1, 1);
+    scene.add(light);
+
+    const backLight = new THREE.DirectionalLight(
+        0xffffff,
+        1
+    );
+    backLight.position.set(
+        0,
+        0,
+        -1);
+    scene.add(backLight);
+
+    const starMaterial = new THREE.PointsMaterial({
+      color: 0xffffff
+    });
+    const starGeometry = new THREE.BufferGeometry();
+
+    const starVertices = [];
+    for (let i = 0; i < 10000; i++) {
+      const x = (Math.random() - 0.5) * 2000;
+      const y = (Math.random() - 0.5) * 2000;
+      const z = (Math.random() - 0.5) * 2000;
+      starVertices.push(x, y, z);
+    }
+
+    starGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starVertices, 3));
+    const stars = new THREE.Points(starGeometry, starMaterial);
+    scene.add(stars);
+
+    const mouse = {
+      x: undefined,
+      y: undefined
+    };
+
+    let frame = 0;
+
+    function animate() {
+      requestAnimationFrame(animate);
+
+      // render scene with camera
+      renderer.render(
+          scene,
+          camera
+      );
+
+      raycaster.setFromCamera(mouse, camera);
+      frame += 0.01;
+      const {
+        array,
+        originalPosition,
+        randomValues
+      } = planeMesh.geometry.attributes.position;
+      for (let i = 0; i < array.length; i += 3) {
+        array[i] = originalPosition[i] + (Math.cos(frame + randomValues[i]) * 0.003);
+        array[i + 1] = originalPosition[i + 1] + (Math.sin(frame + randomValues[i + 1]) * 0.003);
+      }
+
+      planeMesh.geometry.attributes.position.needsUpdate = true;
+
+      const intersects = raycaster.intersectObject(planeMesh);
+      if (intersects.length) {
+        const { color } = intersects[0].object.geometry.attributes;
+        // vertex 1
+        color.setX(intersects[0].face.a, 0.1);
+        color.setY(intersects[0].face.a, 0.5);
+        color.setZ(intersects[0].face.a, 1);
+
+        // vertex 2
+        color.setX(intersects[0].face.b, 0.1);
+        color.setY(intersects[0].face.b, 0.5);
+        color.setZ(intersects[0].face.b, 1);
+
+        // vertex 3
+        color.setX(intersects[0].face.c, 0.1);
+        color.setY(intersects[0].face.c, 0.5);
+        color.setZ(intersects[0].face.c, 1);
+
+        intersects[0].object.geometry.attributes.color.needsUpdate = true;
+
+        const initialColor = { r: 0, g: 0.19, b: 0.4 };
+        const hoverColor = { r: 0.1, g: 0.5, b: 1};
+        gsap.to(hoverColor, {
+          r: initialColor.r,
+          g: initialColor.g,
+          b: initialColor.b,
+          onUpdate: () => {
+            // vertex 1
+            color.setX(intersects[0].face.a, hoverColor.r);
+            color.setY(intersects[0].face.a, hoverColor.g);
+            color.setZ(intersects[0].face.a, hoverColor.b);
+
+            // vertex 2
+            color.setX(intersects[0].face.b, hoverColor.r);
+            color.setY(intersects[0].face.b, hoverColor.g);
+            color.setZ(intersects[0].face.b, hoverColor.b);
+
+            // vertex 3
+            color.setX(intersects[0].face.c, hoverColor.r);
+            color.setY(intersects[0].face.c, hoverColor.g);
+            color.setZ(intersects[0].face.c, hoverColor.b);
+
+            color.needsUpdate = true;
+          }
+        });
+      }
+      stars.rotation.x += 0.0005;
+    }
+
+    animate();
+
+    addEventListener('mousemove', (event) => {
+      mouse.x = ((event.clientX / innerWidth) * 2) - 1;
+      mouse.y = (-(event.clientY / innerHeight) * 2) + 1;
+    });
+
+    gsap.to('#main-header', {
+      opacity: 1,
+      duration: 1.5,
+      y: 0,
+      ease: 'expo'
+    });
+    gsap.to('#tagline', {
+      opacity: 1,
+      duration: 1.5,
+      delay: 0.3,
+      y: 0,
+      ease: 'expo'
+    });
+    gsap.to('#primary-cta', {
+      opacity: 1,
+      duration: 1.5,
+      delay: 0.6,
+      y: 0,
+      ease: 'expo'
+    });
+
+    document.querySelector('#primary-cta').addEventListener('click', (e) => {
+      e.preventDefault();
+      gsap.to('#container', {
+        opacity: 0
+      });
+      gsap.to(camera.position, {
+        z: 25,
+        ease: 'power3.inOut',
+        duration: 2
+      });
+      gsap.to(camera.rotation, {
+        x: Math.PI / 2,
+        ease: 'power3.inOut',
+        duration: 2
+      });
+      gsap.to(camera.position, {
+        y: 1000,
+        ease: 'power3.in',
+        duration: 2,
+        delay: 2
+      });
+    });
+
+    addEventListener('resize', () => {
+      camera.aspect = innerWidth / innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(innerWidth, innerHeight);
+    });
+  }
+}
+</script>
+<style>
+@import "./output.css";
+.font-exo {
+  font-family: 'Exo 2', sans-serif;
+}
+.font-space-mono {
+  font-family: 'Space Mono', monospace;
+}
+</style>

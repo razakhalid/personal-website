@@ -4,11 +4,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "npx tailwindcss -i ./src/assets/css/tailwind-input.css -o ./src/assets/css/tailwind-output.css --watch && vite",
-    "build": "npx tailwindcss -i ./src/assets/css/tailwind-input.css -o ./src/css/tailwind-output.css && vite build",
+    "dev": "npx tailwindcss -i src/input.css -o src/output.css --watch & vite",
+    "build": "npx tailwindcss -i src/input.css -o src/output.css && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "dat.gui": "^0.7.9",
+    "gsap": "^3.6.0",
+    "three": "^0.126.1",
     "vue": "^3.3.11",
     "vue-router": "^4.2.5"
   },
