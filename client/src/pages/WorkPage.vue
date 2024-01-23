@@ -5,34 +5,25 @@
         class="text-white font-exo text-5xl opacity-0 mb-3"
         style="transform: translateY(30px);"
     >MY WORK</h2>
-
-<!--    <div class="flex space-x-4">-->
-<!--      <div-->
-<!--          v-for="item in workItems"-->
-<!--          :key="item.label"-->
-<!--          class="w-full opacity-0"-->
-<!--          ref="workItems"-->
-<!--          style="transform: translateX(30px);"-->
-<!--      >-->
-<!--        <img-->
-<!--            :src="item.src"-->
-<!--            :alt="item.label"-->
-<!--            style="height: 70vh;"-->
-<!--            class="object-cover"-->
-<!--        />-->
-<!--        <p class="text-white font-space-mono text-sm">{{ item.label }}</p>-->
-<!--      </div>-->
-<!--    </div>-->
-
     <Gallery
         :items="workItems"
-    />
+        @show-modal="toggleModal"
+        v-if="!showModal"
+    ></Gallery>
+    <div
+        ref="modal"
+        class="opacity-0"
+        style="translateY(-30px);"
+    >
+      <Modal></Modal>
+    </div>
   </div>
 </template>
 
 <script>
 import gsap from 'gsap';
 import Gallery from '../components/Gallery.vue';
+import Modal from '../components/Modal.vue';
 export default {
   name: 'WorkPage',
   data() {
@@ -51,8 +42,14 @@ export default {
           label: "Verification Progress Tracker",
           src: "/img/projects/verification-flow-stepper.png",
           mobile: true
+        },
+        {
+          label: "Smart Support Page",
+          src: "/img/projects/thumbnails/contact-support-thumbnail.png",
+          customStyles: 'w-5/6'
         }
-      ]
+      ],
+      showModal: false
     }
   },
   mounted() {
@@ -71,8 +68,30 @@ export default {
       delay: 0.3
     });
   },
+  methods: {
+    toggleModal() {
+      if (!this.showModal) {
+        this.showModal = true;
+        gsap.to(this.$refs.modal, {
+          opacity: 1,
+          duration: 2,
+          y: 0,
+          ease: 'expo'
+        });
+      } else {
+        this.showModal = false;
+        gsap.to(this.$refs.modal, {
+          opacity: 0,
+          duration: 2,
+          y: -100,
+          ease: 'expo'
+        });
+      }
+    }
+  },
   components: {
-    Gallery
+    Gallery,
+    Modal
   }
 }
 </script>
