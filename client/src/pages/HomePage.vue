@@ -31,7 +31,7 @@
 </template>
 <script>
 import * as THREE from 'three';
-import * as dat from 'dat.gui';
+// import * as dat from 'dat.gui';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import gsap from 'gsap';
 export default {
@@ -50,7 +50,7 @@ export default {
     });
 
     // setup dat gui
-    const gui = new dat.GUI();
+    // const gui = new dat.GUI();
     const world = {
       plane: {
         width: 400,
@@ -59,10 +59,10 @@ export default {
         heightSegments: 50
       }
     };
-    gui.add(world.plane, 'width', 1, 500).onChange(generatePlane);
-    gui.add(world.plane, 'height', 1, 500).onChange(generatePlane);
-    gui.add(world.plane, 'widthSegments', 1, 100).onChange(generatePlane);
-    gui.add(world.plane, 'heightSegments', 1, 100).onChange(generatePlane);
+    // gui.add(world.plane, 'width', 1, 500).onChange(generatePlane);
+    // gui.add(world.plane, 'height', 1, 500).onChange(generatePlane);
+    // gui.add(world.plane, 'widthSegments', 1, 100).onChange(generatePlane);
+    // gui.add(world.plane, 'heightSegments', 1, 100).onChange(generatePlane);
 
     function generatePlane() {
       planeMesh.geometry.dispose();
