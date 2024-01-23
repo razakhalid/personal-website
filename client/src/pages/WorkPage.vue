@@ -6,28 +6,33 @@
         style="transform: translateY(30px);"
     >MY WORK</h2>
 
-    <div class="flex space-x-4">
-      <div
-          v-for="item in workItems"
-          :key="item.label"
-          class="w-full opacity-0"
-          ref="workItems"
-          style="transform: translateX(30px);"
-      >
-        <img
-            :src="item.src"
-            :alt="item.label"
-            style="height: 70vh;"
-            class="object-cover"
-        />
-        <p class="text-white font-space-mono text-sm">{{ item.label }}</p>
-      </div>
-    </div>
+<!--    <div class="flex space-x-4">-->
+<!--      <div-->
+<!--          v-for="item in workItems"-->
+<!--          :key="item.label"-->
+<!--          class="w-full opacity-0"-->
+<!--          ref="workItems"-->
+<!--          style="transform: translateX(30px);"-->
+<!--      >-->
+<!--        <img-->
+<!--            :src="item.src"-->
+<!--            :alt="item.label"-->
+<!--            style="height: 70vh;"-->
+<!--            class="object-cover"-->
+<!--        />-->
+<!--        <p class="text-white font-space-mono text-sm">{{ item.label }}</p>-->
+<!--      </div>-->
+<!--    </div>-->
+
+    <Gallery
+        :items="workItems"
+    />
   </div>
 </template>
 
 <script>
 import gsap from 'gsap';
+import Gallery from '../components/Gallery.vue';
 export default {
   name: 'WorkPage',
   data() {
@@ -35,15 +40,17 @@ export default {
       workItems: [
         {
           label: "Plan Recommendation Wizard",
-          src: "/img/projects/consultative-plan-1.png"
+          src: "/img/projects/thumbnails/consultative-plan-thumbnail.png"
         },
         {
           label: "Quick & Easy Product Demo",
-          src: "/img/projects/demo-4.jpeg"
+          src: "/img/projects/thumbnails/demo-2-thumbnail.png",
+          mobile: true
         },
         {
           label: "Verification Progress Tracker",
-          src: "/img/projects/verification-flow-stepper.png"
+          src: "/img/projects/verification-flow-stepper.png",
+          mobile: true
         }
       ]
     }
@@ -63,6 +70,9 @@ export default {
       ease: 'expo',
       delay: 0.3
     });
+  },
+  components: {
+    Gallery
   }
 }
 </script>
