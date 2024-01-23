@@ -9,7 +9,7 @@
       <a
           class="h-48 bg-white overflow-hidden rounded-lg flex justify-center items-center shadow-lg
           transition duration-200 hover:scale-105 hover:cursor-pointer md:h-80"
-          @click.prevent="$emit('showModal')"
+          @click.prevent="$emit('toggleModal', item)"
       >
         <img
             :src="item.src"
@@ -43,6 +43,6 @@ export default {
       delay: 0.3
     });
   },
-  emits: ['showModal']
+  emits: ['toggleModal']
 }
 </script>

@@ -7,15 +7,19 @@
     >MY WORK</h2>
     <Gallery
         :items="workItems"
-        @show-modal="toggleModal"
-        v-if="!showModal"
+        @toggle-modal="toggleModal"
+        v-if="!modalOptions.show"
     ></Gallery>
     <div
         ref="modal"
         class="opacity-0"
         style="translateY(-30px);"
     >
-      <Modal></Modal>
+      <Modal
+          :options="modalOptions"
+          v-if="modalOptions.show"
+          @toggle-modal="toggleModal"
+      ></Modal>
     </div>
   </div>
 </template>
@@ -49,7 +53,10 @@ export default {
           customStyles: 'w-5/6'
         }
       ],
-      showModal: false
+      modalOptions: {
+        show: false,
+        header: ""
+      }
     }
   },
   mounted() {
@@ -69,9 +76,11 @@ export default {
     });
   },
   methods: {
-    toggleModal() {
-      if (!this.showModal) {
-        this.showModal = true;
+    toggleModal(item) {
+      if (!this.modalOptions.show) {
+        this.modalOptions.show = true;
+        this.modalOptions.header = item.label;
+        console.log(this.modalOptions)
         gsap.to(this.$refs.modal, {
           opacity: 1,
           duration: 2,
@@ -79,11 +88,10 @@ export default {
           ease: 'expo'
         });
       } else {
-        this.showModal = false;
+        this.modalOptions.show = false;
         gsap.to(this.$refs.modal, {
           opacity: 0,
           duration: 2,
-          y: -100,
           ease: 'expo'
         });
       }
