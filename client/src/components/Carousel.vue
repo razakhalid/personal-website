@@ -2,11 +2,11 @@
   <div>
     <div class="carousel-container mt-5">
       <div class="carousel" data-carousel>
-        <a class="btn left" data-carousel-btn="left">
-          <i class="fas fa-angle-left"></i>
+        <a class="btn left z-10 text-white" data-carousel-btn="left">
+          <i class="fas fa-angle-left font-bold">&larr;</i>
         </a>
-        <a class="btn right" data-carousel-btn="right">
-          <i class="fas fa-angle-right"></i>
+        <a class="btn right z-10 text-white" data-carousel-btn="right">
+          <i class="fas fa-angle-right font-bold">&rarr;</i>
         </a>
         <ul class="slides" data-carousel-slides>
           <li class="slide" data-active>
@@ -169,6 +169,13 @@ export default {
   top: 50%;
   transform: translateY(-50%);
   background: rgb(45,47,49);
+  padding: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.carousel .btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .carousel .btn.left {

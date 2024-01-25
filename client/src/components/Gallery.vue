@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
+  <div class="grid grid-cols-2 gap-4 py-8 px-[250px] sm:grid-cols-3 md:gap-6 xl:gap-8">
     <div
         v-for="item in items"
         ref="item"
@@ -8,7 +8,7 @@
     >
       <a
           class="h-48 bg-white overflow-hidden rounded-lg flex justify-center items-center shadow-lg
-          transition duration-200 hover:scale-105 hover:cursor-pointer md:h-80"
+          transition duration-200 hover:scale-[102%] hover:cursor-pointer md:h-80"
           @click.prevent="$emit('toggleModal', item.id)"
       >
         <img

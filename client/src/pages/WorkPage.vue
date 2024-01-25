@@ -28,16 +28,14 @@
               ></Carousel>
             </div>
             <div class="right">
-              <div class="details-container px-8 py-12">
-<!--                <div class="title">-->
-<!--                  <h2>Plan Recommendation Wizard</h2>-->
-<!--                </div>-->
+              <div class="details-container px-8 py-3">
                 <div class="body">
                   <div
                       v-if="activeWorkItem && activeWorkItem.details"
                       v-for="item in activeWorkItem.details"
+                      class="mb-4"
                   >
-                    <h3 class="text-2xl font-space-mono">{{ item.header }}</h3>
+                    <h3 class="text-xl font-space-mono">{{ item.header }}</h3>
                     <p class="u-text-small">{{ item.body }}</p>
                   </div>
                 </div>
@@ -54,7 +52,6 @@ import gsap from 'gsap';
 import Gallery from '../components/Gallery.vue';
 import Modal from '../components/Modal.vue';
 import Carousel from '../components/Carousel.vue';
-import carousel from "@/components/Carousel.vue";
 export default {
   name: 'WorkPage',
   data() {
@@ -96,20 +93,55 @@ export default {
           id: "quickAndEasyProductDemo",
           label: "Quick & Easy Product Demo",
           src: "/img/projects/thumbnails/demo-2-thumbnail.png",
-          mobile: true
+          mobile: true,
+          details: [
+            {
+              header: "Business Problem",
+              body: "There was no quick and easy way for new users to try the ID verification product. They had to choose and sign up for a plan to be able to do this, causing a large number of them to abandon the product altogether"
+            },
+            {
+              header: "Solution",
+              body: "A product demo modal that renders on the home page of the client portal right after a user creates an account and is logged in, allowing them to try the product."
+            },
+            {
+              header: "Impact",
+              body: "We saw a significant uptick in the number of new users engaging with the product and discussing pricing options with the sales team."
+            }
+          ]
         },
         {
           id: "verificationProgressTracker",
           label: "Verification Progress Tracker",
           src: "/img/projects/verification-flow-stepper.png",
-          mobile: true
+          mobile: true,
+          details: [
+            {
+              header: "Business Problem",
+              body: "Numerous user complaints (via support tickets) about having to wait too long to get \"verified\" via manual review after submitting their ID without a completion time estimate."
+            },
+            {
+              header: "Solution",
+              body: "A progress tracker that reflects the status of the manual review of their ID in real-time."
+            },
+            {
+              header: "Impact",
+              body: "This dramatically reduced the number of user complaints via support tickets by 80% and increased the weekly number of \"cleared\" users by 6%."
+            }
+          ],
+          slides: [
+            {
+              img: {
+                src: "/img/projects/verification-flow-stepper.png"
+              }
+            }
+          ]
         },
-        {
-          id: "smartProductPage",
-          label: "Smart Support Page",
-          src: "/img/projects/thumbnails/contact-support-thumbnail.png",
-          customStyles: 'w-5/6'
-        }
+        // {
+        //   id: "smartProductPage",
+        //   label: "Smart Support Page",
+        //   src: "/img/projects/thumbnails/contact-support-thumbnail.png",
+        //   customStyles: 'w-5/6'
+        // }
       ],
       modalOptions: {
         show: false,
@@ -135,11 +167,11 @@ export default {
   },
   methods: {
     toggleModal(itemId) {
-      this.activeWorkItem = this.workItems.find(item => item.id === itemId);
-      console.log(this.activeWorkItem)
+      if (itemId) this.activeWorkItem = this.workItems.find(item => item.id === itemId);
 
       if (!this.modalOptions.show) {
         this.modalOptions.show = true;
+        this.modalOptions.header = this.activeWorkItem.label;
         gsap.to('#modal', {
           opacity: 1,
           duration: 0.5,

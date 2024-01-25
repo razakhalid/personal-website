@@ -8,14 +8,14 @@
 
     <!--   MODAL   -->
     <div
-        class="rounded-lg px-6 py-4 relative min-w-[750px] max-w-[900px]"
+        class="rounded-lg px-6 py-6 relative min-w-[750px] max-w-[900px]"
         :class="(options.customStyles && options.customStyles.bg) ? options.customStyles.bg : 'bg-white'"
         ref="modal"
     >
 
       <h1
           v-if="options.header"
-          class="text-2xl font-space-mono text-center"
+          class="text-3xl font-exo text-center"
       >{{ options.header }}</h1>
       <a
           class="absolute top-5 right-5 font-bold w-4 hover:cursor-pointer hover:scale-110"

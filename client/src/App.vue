@@ -1,7 +1,16 @@
-<script setup>
-import { RouterView } from 'vue-router'
+<script>
+import HamburgerMenu from "@/components/HamburgerMenu.vue";
+export default {
+  name: 'App',
+  components: {
+    HamburgerMenu
+  }
+}
 </script>
 
 <template>
-  <RouterView/>
+  <div class="relative">
+    <HamburgerMenu></HamburgerMenu>
+    <RouterView/>
+  </div>
 </template>
