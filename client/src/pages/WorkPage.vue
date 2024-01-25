@@ -2,25 +2,50 @@
   <div class="bg-black h-screen px-6 py-12">
     <h2
         ref="title"
-        class="text-white font-exo text-5xl opacity-0 mb-3"
+        class="text-white font-exo text-5xl opacity-0 mb-3 text-center"
         style="transform: translateY(30px);"
     >MY WORK</h2>
     <Gallery
         :items="workItems"
         @toggle-modal="toggleModal"
-        v-if="!modalOptions.show"
     ></Gallery>
-    <div
-        ref="modal"
-        class="opacity-0"
-        style="translateY(-30px);"
-    >
-      <Modal
+    <Modal
           :options="modalOptions"
-          v-if="modalOptions.show"
           @toggle-modal="toggleModal"
-      ></Modal>
-    </div>
+          id="modal"
+          class="opacity-0"
+          style="translateY(-30px);"
+          v-show="modalOptions.show"
+      >
+      <template #header>
+        {{ activeWorkItem.label }}
+      </template>
+      <template #content>
+          <div class="content py-5 px-3 grid grid-cols-2">
+            <div class="left relative">
+              <Carousel
+                  :options="activeWorkItem"
+              ></Carousel>
+            </div>
+            <div class="right">
+              <div class="details-container px-8 py-12">
+<!--                <div class="title">-->
+<!--                  <h2>Plan Recommendation Wizard</h2>-->
+<!--                </div>-->
+                <div class="body">
+                  <div
+                      v-if="activeWorkItem && activeWorkItem.details"
+                      v-for="item in activeWorkItem.details"
+                  >
+                    <h3 class="text-2xl font-space-mono">{{ item.header }}</h3>
+                    <p class="u-text-small">{{ item.body }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </template>
+    </Modal>
   </div>
 </template>
 
@@ -28,26 +53,59 @@
 import gsap from 'gsap';
 import Gallery from '../components/Gallery.vue';
 import Modal from '../components/Modal.vue';
+import Carousel from '../components/Carousel.vue';
+import carousel from "@/components/Carousel.vue";
 export default {
   name: 'WorkPage',
   data() {
     return {
+      activeWorkItem: {},
       workItems: [
         {
+          id: "planRecommendationWizard",
           label: "Plan Recommendation Wizard",
-          src: "/img/projects/thumbnails/consultative-plan-thumbnail.png"
+          src: "/img/projects/thumbnails/consultative-plan-thumbnail.png",
+          details: [
+            {
+              header: "Business Problem",
+              body: "A 30% time cost to the sales team in talking to new users and recommending the right product configuration for them."
+            },
+            {
+              header: "Solution",
+              body: "A feature that asks the user a series of questions to understand the nature of their business and uses their responses to offer a recommendation for what plan would be best suited to their needs."
+            },
+            {
+              header: "Impact",
+              body: "The time spent by the sales team in performing this task dropped down to around 15%."
+            }
+          ],
+          slides: [
+            {
+              img: {
+                src: "/img/projects/consultative-plan-1.png"
+              },
+            },
+            {
+              img: {
+                src: "/img/projects/consultative-plan-2.png"
+              }
+            }
+          ]
         },
         {
+          id: "quickAndEasyProductDemo",
           label: "Quick & Easy Product Demo",
           src: "/img/projects/thumbnails/demo-2-thumbnail.png",
           mobile: true
         },
         {
+          id: "verificationProgressTracker",
           label: "Verification Progress Tracker",
           src: "/img/projects/verification-flow-stepper.png",
           mobile: true
         },
         {
+          id: "smartProductPage",
           label: "Smart Support Page",
           src: "/img/projects/thumbnails/contact-support-thumbnail.png",
           customStyles: 'w-5/6'
@@ -76,22 +134,23 @@ export default {
     });
   },
   methods: {
-    toggleModal(item) {
+    toggleModal(itemId) {
+      this.activeWorkItem = this.workItems.find(item => item.id === itemId);
+      console.log(this.activeWorkItem)
+
       if (!this.modalOptions.show) {
         this.modalOptions.show = true;
-        this.modalOptions.header = item.label;
-        console.log(this.modalOptions)
-        gsap.to(this.$refs.modal, {
+        gsap.to('#modal', {
           opacity: 1,
-          duration: 2,
+          duration: 0.5,
           y: 0,
           ease: 'expo'
         });
       } else {
         this.modalOptions.show = false;
-        gsap.to(this.$refs.modal, {
+        gsap.to('#modal', {
           opacity: 0,
-          duration: 2,
+          duration: 0.5,
           ease: 'expo'
         });
       }
@@ -99,7 +158,8 @@ export default {
   },
   components: {
     Gallery,
-    Modal
+    Modal,
+    Carousel
   }
 }
 </script>
