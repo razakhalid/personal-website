@@ -1,44 +1,82 @@
 <template>
   <div class="bg-black px-6 py-12 min-h-screen text-white">
     <PageTitle
-        title="ABOUT"
-        class="mb-10"
+        title="ABOUT ME"
+        class="mb-16"
     ></PageTitle>
 
-
-<!--    <div class="flex justify-center items-center mt-12 mb-8">-->
-<!--      <img-->
-<!--          class="w-[200px] h-[200px] object-cover object-center rounded-full"-->
-<!--          src="/img/profile-photo%20(1).jpeg"-->
-<!--          alt="Raza Khalid"-->
-<!--      />-->
-<!--    </div>-->
-
-    <p class="font-space-mono text-2xl text-center mb-5">My conversation with an imaginary recruiter:</p>
-
-    <div class="bg-white max-w-2xl h-[70vh] mx-auto overflow-y-scroll">
-      <section
-          class="container max-w-2xl mx-auto px-4"
-          v-for="item in chatItems"
-      >
-        <div class="flex items-center justify-end">
-          <div class="bg-blue-700 p-4 my-6 rounded-lg flex-1 font-space-mono max-w-md">
-            {{ item.message }}
-          </div>
-          <div class="w-3 overflow-hidden ">
-            <div class="h-4 bg-blue-700 rotate-45 transform origin-top-left rounded-sm"></div>
+    <!--  LEFT  -->
+    <div class="grid grid-cols-2">
+      <div class="left px-4">
+        <div class="flex justify-center items-center mb-16">
+          <img
+              class="w-[200px] h-[200px] object-cover object-center rounded-full"
+              src="/img/profile-photo%20(1).jpeg"
+              alt="Raza Khalid"
+          />
+          <div>
+            <h2 class="font-space-mono text-3xl text-center ml-10">Hi, I'm Raza.</h2>
+            <a
+                href="mailto:ra97za@gmail.com?subject=Nice Portfolio!"
+                class="flex ml-9 mt-4 hover:underline hover:cursor-pointer hover:scale-105"
+            >
+              <div class="h-6 w-6 transform translate-y-1">
+                <img src="/icons/email.svg" alt="Email">
+              </div>
+              <span
+                  class="text-white text-lg ml-2"
+              >ra97za@gmail.com</span>
+            </a>
+            <a
+                href="https://www.linkedin.com/in/raza-khalid/"
+                target="_blank"
+                class="flex ml-9"
+            >
+              <div class="h-6 w-6 transform translate-y-1">
+                <img src="/icons/location.svg" alt="Location">
+              </div>
+              <span
+                  class="text-white text-lg ml-2"
+              >Minneapolis, MN</span>
+            </a>
           </div>
         </div>
-        <div class="flex items-center justify-start">
-          <div class="w-3 overflow-hidden">
-            <div class="h-4 bg-green-500 rotate-45 transform origin-bottom-right rounded-sm"></div>
-          </div>
-          <div class="bg-green-500 p-4 my-6 rounded-lg flex-1 font-space-mono max-w-md">
-            {{ item.response }}
-          </div>
+        <div class="max-w-5xl mx-auto mb-12">
+          <p class="font-space-mono text-2xl text-center">
+            I have over 3 years of professional software engineering experience with a focus in front end engineering, UX and UI design.
+          </p>
         </div>
+      </div>
 
-      </section>
+      <!--  RIGHT  -->
+      <div>
+        <p class="font-space-mono text-xl text-center mb-4">Learn more from my chat with an imaginary recruiter:</p>
+
+        <div class="bg-white max-w-2xl h-[70vh] mx-auto overflow-y-scroll">
+          <section
+              class="container max-w-2xl mx-auto"
+              v-for="item in chatItems"
+          >
+            <div class="flex items-center justify-end">
+              <div class="bg-blue-700 p-4 my-6 rounded-lg flex-1 font-space-mono max-w-md">
+                {{ item.message }}
+              </div>
+              <div class="w-3 overflow-hidden ">
+                <div class="h-4 bg-blue-700 rotate-45 transform origin-top-left rounded-sm"></div>
+              </div>
+            </div>
+            <div class="flex items-center justify-start">
+              <div class="w-3 overflow-hidden">
+                <div class="h-4 bg-green-500 rotate-45 transform origin-bottom-right rounded-sm"></div>
+              </div>
+              <div class="bg-green-500 p-4 my-6 rounded-lg flex-1 font-space-mono max-w-md">
+                {{ item.response }}
+              </div>
+            </div>
+
+          </section>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -51,7 +89,7 @@ export default {
       chatItems: [
         {
           message: "Tell me about yourself...",
-          response: "I'm a front end software engineer who loves solving business problems."
+          response: "I'm a front end software engineer who solves business problems."
         },
         {
           message: "Interesting, how do you do that?",
