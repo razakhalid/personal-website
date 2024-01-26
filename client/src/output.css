@@ -654,12 +654,24 @@ video {
   left: 0.75rem;
 }
 
+.top-0 {
+  top: 0px;
+}
+
 .z-10 {
   z-index: 10;
 }
 
 .z-20 {
   z-index: 20;
+}
+
+.z-\[20\] {
+  z-index: 20;
+}
+
+.z-\[25\] {
+  z-index: 25;
 }
 
 .float-left {
@@ -708,6 +720,16 @@ video {
 .my-\[2\.75rem\] {
   margin-top: 2.75rem;
   margin-bottom: 2.75rem;
+}
+
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.my-40 {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 }
 
 .mb-3 {
@@ -776,6 +798,42 @@ video {
 
 .mb-1 {
   margin-bottom: 0.25rem;
+}
+
+.mt-24 {
+  margin-top: 6rem;
+}
+
+.mt-40 {
+  margin-top: 10rem;
+}
+
+.mt-\[50px\] {
+  margin-top: 50px;
+}
+
+.mt-\[80px\] {
+  margin-top: 80px;
+}
+
+.mt-\[100px\] {
+  margin-top: 100px;
+}
+
+.mt-\[150px\] {
+  margin-top: 150px;
+}
+
+.mt-\[120px\] {
+  margin-top: 120px;
+}
+
+.mt-\[130px\] {
+  margin-top: 130px;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 
 .block {
@@ -932,6 +990,30 @@ video {
 
 .w-12 {
   width: 3rem;
+}
+
+.w-1\/6 {
+  width: 16.666667%;
+}
+
+.w-2\/6 {
+  width: 33.333333%;
+}
+
+.w-\[400px\] {
+  width: 400px;
+}
+
+.w-\[300px\] {
+  width: 300px;
+}
+
+.w-\[200px\] {
+  width: 200px;
+}
+
+.w-\[250px\] {
+  width: 250px;
 }
 
 .min-w-\[350px\] {
@@ -1257,6 +1339,53 @@ video {
   background-color: transparent;
 }
 
+.bg-\[rgba\(255\2c 255\2c 255\2c 0\.2\)\] {
+  background-color: rgba(255,255,255,0.2);
+}
+
+.bg-\[rgba\(255\2c 255\2c 255\2c 0\.1\)\] {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.bg-\[rgba\(255\2c 255\2c 255\2c 0\.15\)\] {
+  background-color: rgba(255,255,255,0.15);
+}
+
+.bg-\[rgba\(255\2c 255\2c 255\2c 10\%\)\] {
+  background-color: rgba(255,255,255,10%);
+}
+
+.bg-\[rgba\(255\2c 255\2c 255\2c 5\%\)\] {
+  background-color: rgba(255,255,255,5%);
+}
+
+.bg-\[rgba\(255\2c 255\2c 255\2c 8\%\)\] {
+  background-color: rgba(255,255,255,8%);
+}
+
+.bg-\[rgba\(255\2c 255\2c 255\2c 20\%\)\] {
+  background-color: rgba(255,255,255,20%);
+}
+
+.bg-\[rgba\(255\2c 255\2c 255\2c 100\%\)\] {
+  background-color: rgba(255,255,255,100%);
+}
+
+.bg-gray-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
+.bg-\[rgb\(71\2c 78\2c 85\)\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 78 85 / var(--tw-bg-opacity));
+}
+
+.bg-\[rgb\(0\2c 48\2c 102\)\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 48 102 / var(--tw-bg-opacity));
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -1409,6 +1538,16 @@ video {
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+}
+
+.px-\[100px\] {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .pt-1 {
@@ -1643,9 +1782,21 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-\[rgba\(0\2c 0\2c 0\2c 10\%\)\]:hover {
+  background-color: rgba(0,0,0,10%);
+}
+
 .hover\:text-gray-800:hover {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
+}
+
+.hover\:opacity-0:hover {
+  opacity: 0;
 }
 
 .hover\:ring-8:hover {
@@ -1714,6 +1865,16 @@ video {
   .sm\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .sm\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .sm\:px-\[100px\] {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1732,10 +1893,52 @@ video {
   .md\:gap-6 {
     gap: 1.5rem;
   }
+
+  .md\:px-\[100px\] {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .md\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:px-\[250px\] {
+    padding-left: 250px;
+    padding-right: 250px;
+  }
+
+  .lg\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
 }
 
 @media (min-width: 1280px) {
   .xl\:gap-8 {
     gap: 2rem;
+  }
+
+  .xl\:px-\[250px\] {
+    padding-left: 250px;
+    padding-right: 250px;
+  }
+
+  .xl\:px-\[200px\] {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+
+  .xl\:px-\[225px\] {
+    padding-left: 225px;
+    padding-right: 225px;
+  }
+
+  .xl\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }

@@ -1,5 +1,5 @@
 <script>
-import HamburgerMenu from "@/components/HamburgerMenu.vue";
+import HamburgerMenu from "@/components/Nav.vue";
 export default {
   name: 'App',
   components: {

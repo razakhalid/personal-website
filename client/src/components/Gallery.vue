@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-2 gap-4 py-8 px-[250px] sm:grid-cols-3 md:gap-6 xl:gap-8">
+  <div class="grid grid-cols-2 gap-4 py-8 sm:grid-cols-3 md:gap-6 md:px-6 xl:px-[250px] xl:gap-8">
     <div
         v-for="item in items"
         ref="item"
