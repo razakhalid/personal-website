@@ -1,10 +1,8 @@
 <template>
-  <div class="bg-black h-screen px-6 py-12">
-    <h2
-        ref="title"
-        class="text-white font-exo text-5xl opacity-0 mb-3 text-center"
-        style="transform: translateY(30px);"
-    >MY WORK</h2>
+  <div class="bg-black w-screen h-screen px-6 py-12">
+    <PageTitle
+        title="MY WORK"
+    ></PageTitle>
     <Gallery
         :items="workItems"
         @toggle-modal="toggleModal"
@@ -150,12 +148,12 @@ export default {
     }
   },
   mounted() {
-    gsap.to(this.$refs.title, {
-      opacity: 1,
-      duration: 1.5,
-      y: 0,
-      ease: 'expo'
-    });
+    // gsap.to(this.$refs.title, {
+    //   opacity: 1,
+    //   duration: 1.5,
+    //   y: 0,
+    //   ease: 'expo'
+    // });
     gsap.to(this.$refs.workItems, {
       opacity: 1,
       duration: 2,

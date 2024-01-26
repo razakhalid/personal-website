@@ -1,10 +1,28 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
+import PageTitle from './components/PageTitle.vue';
 
 const app = createApp(App)
 
-app.use(router)
+// CONFIG
+app.use(router);
+
+// GLOBAL COMPONENTS
+app.component('PageTitle', PageTitle);
+
+// DIRECTIVES
+app.directive('click-outside', {
+    mounted(el, binding) {
+        document.body.addEventListener('click', (event) => {
+            const { target } = event;
+            const isOutsideClick = !(target === el || el.contains(target));
+            if (isOutsideClick) {
+                binding.value();
+            }
+        });
+    }
+});
 
 app.mount('#app')
 
