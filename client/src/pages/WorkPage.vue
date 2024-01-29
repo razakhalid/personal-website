@@ -33,7 +33,7 @@
                       v-for="item in activeWorkItem.details"
                       class="mb-4"
                   >
-                    <h3 class="text-xl font-space-mono">{{ item.header }}</h3>
+                    <h3 class="text-2xl font-space-mono font-bold">{{ item.header }}</h3>
                     <p class="u-text-small">{{ item.body }}</p>
                   </div>
                 </div>
