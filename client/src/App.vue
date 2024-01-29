@@ -1,16 +1,16 @@
 <script>
-import HamburgerMenu from "@/components/Nav.vue";
+import Nav from "@/components/Nav.vue";
 export default {
   name: 'App',
   components: {
-    HamburgerMenu
+    Nav
   }
 }
 </script>
 
 <template>
   <div class="relative">
-    <HamburgerMenu></HamburgerMenu>
+    <Nav></Nav>
     <RouterView/>
   </div>
 </template>

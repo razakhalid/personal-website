@@ -21,18 +21,17 @@
           ></span>
         </span>
         <span
-            class="x-container w-0 absolute flex items-center justify-center transition-all duration-500 top-1/2 w-0
-          -translate-x-10"
-            :class="{ '-translate-x-0 w-12' : isOpen }"
+            class="x-container w-0 absolute flex items-center justify-center transition-all duration-500 top-1/2 w-0"
+            :class="{ '-translate-x-10' : !isOpen, 'w-12' : isOpen }"
         >
-        <span
-            class="absolute block bg-white h-[2px] transform transition-all duration-500 rotate-0 delay-300"
-            :class="{ 'rotate-45 w-5' : isOpen }"
-        ></span>
-        <span
-            class="absolute block bg-white h-[2px] transform transition-all duration-500 -rotate-0 delay-300"
-            :class="{ '-rotate-45 w-5' : isOpen }"
-        ></span>
+          <span
+              class="absolute block bg-white h-[2px] transform transition-all duration-500 rotate-0 delay-300"
+              :class="{ 'rotate-45 w-5' : isOpen }"
+          ></span>
+          <span
+              class="absolute block bg-white h-[2px] transform transition-all duration-500 -rotate-0 delay-300"
+              :class="{ '-rotate-45 w-5' : isOpen }"
+          ></span>
       </span>
       </span>
     </button>
