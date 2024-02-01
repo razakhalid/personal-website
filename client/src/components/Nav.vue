@@ -6,7 +6,7 @@
         @click.stop="toggle"
     >
       <span class="relative">
-        <span class="horizontal-lines-container block h-4/6 p-2 flex flex-col justify-between items-center">
+        <span class="horizontal-lines-container h-4/6 p-2 flex flex-col justify-between items-center">
           <span
               class="block bg-white h-[2px] w-7 rounded transform transition-all duration-300 origin-left"
               :class="{ 'translate-x-10' : isOpen }"

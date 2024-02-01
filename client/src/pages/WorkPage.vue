@@ -19,7 +19,7 @@
         {{ activeWorkItem.label }}
       </template>
       <template #content>
-          <div class="content py-5 px-3 grid grid-cols-2">
+          <div class="content py-5 px-3 grid grid-cols-2" v-if="activeWorkItem.slides && activeWorkItem.slides.length">
             <div class="left relative">
               <Carousel
                   :options="activeWorkItem"
@@ -76,15 +76,29 @@ export default {
           ],
           slides: [
             {
+              id: 'consultativePlan1',
               img: {
                 src: "/img/projects/consultative-plan-1.png"
               },
             },
             {
+              id: 'consultativePlan2',
               img: {
                 src: "/img/projects/consultative-plan-2.png"
               }
-            }
+            },
+            {
+              id: 'consultativePlan3',
+              img: {
+                src: "/img/projects/consultative-plan-1.png"
+              },
+            },
+            {
+              id: 'consultativePlan4',
+              img: {
+                src: "/img/projects/consultative-plan-2.png"
+              }
+            },
           ]
         },
         {
