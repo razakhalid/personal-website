@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="absolute top-0">
     <!--  Hamburger Button  -->
     <button
         class="bg-transparent rounded-full w-[50px] h-[50px] absolute overflow-hidden my-[2.75rem] mx-8 z-[25]"
@@ -37,7 +37,7 @@
     </button>
 
     <!--  Nav Menu Drawer  -->
-    <div class="nav z-[20] bg-[rgb(0,48,102)] absolute left-0 top-0 w-0 h-screen transition-all duration-300"
+    <div class="nav z-[20] bg-[rgb(0,48,102)] absolute w-0 h-screen transition-all duration-300"
          ref="nav"
          v-click-outside="close"
     >
@@ -47,7 +47,7 @@
         <a
             v-for="route in routes"
             @click.prevent="handleClick(route.name)"
-            class="flex flex-col mb-5 font-exo opacity-0 transition-all duration-300 text-white text-3xl hover:cursor-pointer hover:scale-105"
+            class="flex flex-col mb-5 opacity-0 transition-all duration-300 text-white text-3xl hover:cursor-pointer hover:scale-105"
             ref="link"
             :class="{ 'opacity-1' : isOpen }"
         >

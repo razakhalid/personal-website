@@ -13,7 +13,10 @@
     "gsap": "^3.6.0",
     "three": "^0.126.1",
     "vue": "^3.3.11",
-    "vue-router": "^4.2.5"
+    "vue-carousel": "^0.18.0",
+    "vue-carousel-3d": "^1.0.1",
+    "vue-router": "^4.2.5",
+    "vue3-carousel": "^0.3.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.2",

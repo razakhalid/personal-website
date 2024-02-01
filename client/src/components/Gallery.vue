@@ -18,7 +18,7 @@
             :class="item.mobile ? 'h-5/6' : 'w-5/6'"
         />
       </a>
-      <p class="text-white font-space-mono text-center mt-1">{{ item.label }}</p>
+      <p class="text-white text-center mt-1">{{ item.label }}</p>
     </div>
   </div>
 </template>

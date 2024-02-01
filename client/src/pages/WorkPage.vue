@@ -105,6 +105,28 @@ export default {
               header: "Impact",
               body: "We saw a significant uptick in the number of new users engaging with the product and discussing pricing options with the sales team."
             }
+          ],
+          slides: [
+            {
+              img: {
+                src: "/img/projects/demo-1.png"
+              },
+            },
+            {
+              img: {
+                src: "/img/projects/demo-2.png"
+              }
+            },
+            {
+              img: {
+                src: "/img/projects/demo-3.jpeg"
+              }
+            },
+            {
+              img: {
+                src: "/img/projects/demo-4.jpeg"
+              }
+            }
           ]
         },
         {
