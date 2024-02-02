@@ -1,7 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import PageTitle from './components/PageTitle.vue';
 import { Quasar } from 'quasar'
 import quasarUserOptions from './quasar-user-options'
 import { createStore } from 'vuex';
@@ -22,9 +21,6 @@ const app = createApp(App).use(Quasar, quasarUserOptions)
 // CONFIG
 app.use(router);
 app.use(store);
-
-// GLOBAL COMPONENTS
-app.component('PageTitle', PageTitle);
 
 // DIRECTIVES
 app.directive('click-outside', {

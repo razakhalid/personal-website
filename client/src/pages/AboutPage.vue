@@ -1,16 +1,12 @@
 <template>
-  <div class="bg-black px-6 py-12 min-h-screen text-white">
-    <PageTitle
-        title="ABOUT ME"
-        class="mb-16"
-    ></PageTitle>
+  <div class="px-6">
 
     <!--  LEFT  -->
     <div class="grid grid-cols-2">
       <div class="left px-4">
         <div class="flex justify-center items-center mb-16">
           <img
-              class="w-[200px] h-[200px] object-cover object-center rounded-full"
+              class="w-[100px] h-[100px] object-cover object-center rounded-full"
               src="/img/profile-photo%20(1).jpeg"
               alt="Raza Khalid"
           />
@@ -24,7 +20,7 @@
                 <img src="/icons/email.svg" alt="Email">
               </div>
               <span
-                  class="text-white text-lg ml-2"
+                  class="text-lg ml-2"
               >ra97za@gmail.com</span>
             </a>
             <a

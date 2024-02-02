@@ -1,72 +1,45 @@
 <template>
-  <div class="absolute top-0">
-    <!--  Hamburger Button  -->
-    <button
-        class="bg-transparent rounded-full w-[50px] h-[50px] absolute overflow-hidden my-[2.75rem] mx-8 z-[25]"
-        @click.stop="toggle"
-    >
-      <span class="relative">
-        <span class="horizontal-lines-container h-4/6 p-2 flex flex-col justify-between items-center">
-          <span
-              class="block bg-white h-[2px] w-7 rounded transform transition-all duration-300 origin-left"
-              :class="{ 'translate-x-10' : isOpen }"
-          ></span>
-          <span
-              class="block bg-white h-[2px] w-7 rounded transform transition-all duration-300 delay-75"
-              :class="{ 'translate-x-10' : isOpen }"
-          ></span>
-          <span
-            class="block bg-white h-[2px] w-7 rounded transform transition-all duration-300 origin-left delay-150"
-            :class="{ 'translate-x-10' : isOpen }"
-          ></span>
-        </span>
-        <span
-            class="x-container w-0 absolute flex items-center justify-center transition-all duration-500 top-1/2 w-0"
-            :class="{ '-translate-x-10' : !isOpen, 'w-12' : isOpen }"
-        >
-          <span
-              class="absolute block bg-white h-[2px] transform transition-all duration-500 rotate-0 delay-300"
-              :class="{ 'rotate-45 w-5' : isOpen }"
-          ></span>
-          <span
-              class="absolute block bg-white h-[2px] transform transition-all duration-500 -rotate-0 delay-300"
-              :class="{ '-rotate-45 w-5' : isOpen }"
-          ></span>
-      </span>
-      </span>
-    </button>
-
-    <!--  Nav Menu Drawer  -->
-    <div class="nav z-[20] bg-[rgb(0,48,102)] absolute w-0 h-screen transition-all duration-300"
-         ref="nav"
-         v-click-outside="close"
-    >
-      <div
-          class="links mt-[130px] px-12"
+  <div class="q-pa-md flex justify-center">
+    <q-toolbar class="bg-transparent text-white max-w-[1300px]">
+<!--      <q-btn flat label="Homepage" />-->
+      <router-link
+          :to="{ name: routes[0].name }"
       >
-        <a
-            v-for="route in routes"
-            @click.prevent="handleClick(route.name)"
-            class="flex flex-col mb-5 opacity-0 transition-all duration-300 text-white text-3xl hover:cursor-pointer hover:scale-105"
-            ref="link"
-            :class="{ 'opacity-1' : isOpen }"
-        >
-          {{ route.name }}
-        </a>
-      </div>
-    </div>
+        <img
+            src="/img/rkd-logo-clipped.png"
+            alt="RKD"
+            class="max-h-12"
+        />
+      </router-link>
+      <q-space />
+
+      <!--
+        notice shrink property since we are placing it
+        as child of QToolbar
+      -->
+      <q-tabs v-model="tab" shrink stretch>
+        <q-route-tab
+            v-for="({ name }, i) in routes"
+            :to="{ name }"
+            :label="name"
+            :key="i"
+        />
+      </q-tabs>
+    </q-toolbar>
   </div>
 </template>
 
 <script>
 import gsap from 'gsap';
 import routes from '../router/routes';
+import { ref } from 'vue';
 export default {
   name: 'Nav',
   data() {
     return {
       isOpen: false,
-      routes
+      routes,
+      tab: ref('')
     }
   },
   methods: {
@@ -110,3 +83,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+.q-tab {
+  letter-spacing: 0.025em;
+}
+</style>

@@ -6,6 +6,7 @@ export default [
     {
         name: 'Home',
         path: '/',
+        alias: ['/home'],
         component: HomePage
     },
     {

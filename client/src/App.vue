@@ -17,7 +17,7 @@ export default {
   <div class="relative w-screen h-screen">
     <canvas
         ref="canvas"
-        class="absolute"
+        class="absolute -z-10 h-screen w-screen"
     ></canvas>
     <Nav></Nav>
 

@@ -1,8 +1,5 @@
 <template>
-  <div class="bg-black w-screen h-screen px-6 py-12">
-    <PageTitle
-        title="MY WORK"
-    ></PageTitle>
+  <div class="px-6 py-12">
     <Gallery
         :items="workItems"
         @toggle-modal="toggleModal"
