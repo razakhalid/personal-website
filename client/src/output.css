@@ -963,6 +963,11 @@ video {
   letter-spacing: 0.025em;
 }
 
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1000,7 +1005,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Exo 2', sans-serif;
 }
 
-a, button, p {
+a, button, p, span {
   font-family: 'Space Mono', monospace;
 }
 

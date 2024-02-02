@@ -24,6 +24,30 @@
             :label="name"
             :key="i"
         />
+        <q-btn-dropdown
+            auto-close
+            stretch
+            flat
+            label="Contact"
+        >
+          <q-list>
+            <q-item>
+              <q-item-section>
+                <a
+                    href="mailto:ra97za@gmail.com?subject=Nice Portfolio!"
+                    class="text-black flex hover:underline hover:cursor-pointer hover:scale-105"
+                >
+                  <div class="h-6 w-6 transform translate-y-1">
+                    <img src="/icons/email.svg" alt="Email">
+                  </div>
+                  <span
+                      class="text-lg ml-2"
+                  >ra97za@gmail.com</span>
+                </a>
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </q-btn-dropdown>
       </q-tabs>
     </q-toolbar>
   </div>
