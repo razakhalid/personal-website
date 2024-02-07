@@ -111,4 +111,9 @@ export default {
 .q-tab {
   letter-spacing: 0.025em;
 }
+@media (max-width: 576px) {
+  .q-tab, .q-btn {
+    padding: 0 0.5em;
+  }
+}
 </style>

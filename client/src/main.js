@@ -28,10 +28,8 @@ app.mixin({
         const appContent = document.querySelector('#app-content');
         const height = appContent && appContent.offsetHeight;
         const width = appContent && appContent.offsetWidth;
-        console.log(width)
         if (window.resizeCanvas) window.resizeCanvas({ height, width });
         window.addEventListener('resize', () => {
-            console.log('resizing')
             window.resizeCanvas({ height });
         });
     }

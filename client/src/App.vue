@@ -20,9 +20,9 @@ export default {
   <div class="relative min-h-screen" id="app-content">
     <canvas
         ref="canvas"
-        class="absolute -z-10 h-screen w-screen"
+        class="fixed -z-10 h-screen w-screen"
     ></canvas>
-    <div class="max-w-[1000px] mx-auto">
+    <div class="max-w-[1000px] mx-auto px-4 sm:px-8">
       <Nav></Nav>
 
       <RouterView v-slot="{ Component }">

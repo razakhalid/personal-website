@@ -3,25 +3,28 @@
 
     <div class="flex justify-center items-center mb-16">
         <img
-            class="w-[150px] h-[150px] object-cover object-center rounded-full"
+            class="w-[150px] h-[150px] mb-4 object-cover object-center rounded-full"
             src="/img/profile-photo%20(1).jpeg"
             alt="Raza Khalid"
         />
         <div>
-          <h2 class="font-space-mono text-5xl ml-10">Hi, I'm Raza.</h2>
-          <div class="flex ml-10 mt-2">
+          <h2 class="font-space-mono text-5xl text-center sm:ml-10 sm:!text-left">Hi, I'm Raza.</h2>
+          <div class="flex justify-center ml-10 mt-2">
             <div class="h-6 w-6 transform translate-y-1">
               <img src="/icons/location.svg" alt="Location">
             </div>
-            <span
-                class="text-white text-lg ml-2"
-            >Minneapolis, MN (can relocate)</span>
+            <div class="flex justify-center">
+              <div
+                  class="text-lg mt-0.5 ml-2"
+              >Minneapolis, MN</div>
+              <div class="text-lg ml-2 mt-0.5">(can relocate)</div>
+            </div>
           </div>
         </div>
       </div>
 
     <h4 class="text-center mb-8">Why Should You Hire Me?</h4>
-    <div class="grid grid-cols-3 gap-4 mb-16">
+    <div class="grid grid-cols-1 gap-4 mb-16 sm:grid-cols-2 md:grid-cols-3">
       <q-card
           dark
           bordered
