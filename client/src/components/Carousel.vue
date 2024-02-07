@@ -56,7 +56,7 @@ export default {
       return this.slideCount && this.options.slides.map((slide, i) => ({ label: i + 1, value: slide.id }));
     }
   },
-  mounted() {
+  beforeMount() {
     this.slide = this.slideCount && ref(this.options.slides && this.options.slides[0].id);
     console.log(this.$store.getters.isRazaCool)
   }

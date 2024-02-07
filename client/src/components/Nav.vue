@@ -1,6 +1,6 @@
 <template>
-  <div class="q-pa-md flex justify-center">
-    <q-toolbar class="bg-transparent text-white max-w-[1300px]">
+  <div class="q-pt-md flex justify-center">
+    <q-toolbar class="bg-transparent">
 <!--      <q-btn flat label="Homepage" />-->
       <router-link
           :to="{ name: routes[0].name }"
@@ -35,7 +35,7 @@
               <q-item-section>
                 <a
                     href="mailto:ra97za@gmail.com?subject=Nice Portfolio!"
-                    class="text-black flex hover:underline hover:cursor-pointer hover:scale-105"
+                    class="text-black flex hover:underline hover:cursor-pointer"
                 >
                   <div class="h-6 w-6 transform translate-y-1">
                     <img src="/icons/email.svg" alt="Email">

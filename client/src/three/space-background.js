@@ -225,11 +225,23 @@ export function setBackground(canvas) {
         mouse.y = (-(event.clientY / innerHeight) * 2) + 1;
     });
 
-    addEventListener('resize', () => {
-        camera.aspect = innerWidth / innerHeight;
+    function resizeCanvas(options = {}) {
+        const {
+            height,
+            width = innerWidth
+        } = options;
+        camera.aspect = width / height;
         camera.updateProjectionMatrix();
-        renderer.setSize(innerWidth, innerHeight);
-    });
+        // console.log('resizing to: ', height);
+        renderer.setSize(width, height);
+    }
+
+    addEventListener('resize', resizeCanvas);
+
+    return {
+        renderer,
+        resizeCanvas
+    }
 }
 
 // document.querySelector('#primary-cta').addEventListener('click', (e) => {

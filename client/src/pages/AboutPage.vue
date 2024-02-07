@@ -1,77 +1,71 @@
 <template>
-  <div class="px-6">
+  <div class="mt-20">
 
-    <!--  LEFT  -->
-    <div class="grid grid-cols-2">
-      <div class="left px-4">
-        <div class="flex justify-center items-center mb-16">
-          <img
-              class="w-[100px] h-[100px] object-cover object-center rounded-full"
-              src="/img/profile-photo%20(1).jpeg"
-              alt="Raza Khalid"
-          />
-          <div>
-            <h2 class="font-space-mono text-3xl text-center ml-10">Hi, I'm Raza.</h2>
-            <a
-                href="mailto:ra97za@gmail.com?subject=Nice Portfolio!"
-                class="flex ml-9 mt-4 hover:underline hover:cursor-pointer hover:scale-105"
-            >
-              <div class="h-6 w-6 transform translate-y-1">
-                <img src="/icons/email.svg" alt="Email">
-              </div>
-              <span
-                  class="text-lg ml-2"
-              >ra97za@gmail.com</span>
-            </a>
-            <a
-                href="https://www.linkedin.com/in/raza-khalid/"
-                target="_blank"
-                class="flex ml-9"
-            >
-              <div class="h-6 w-6 transform translate-y-1">
-                <img src="/icons/location.svg" alt="Location">
-              </div>
-              <span
-                  class="text-white text-lg ml-2"
-              >Minneapolis, MN</span>
-            </a>
+    <div class="flex justify-center items-center mb-16">
+        <img
+            class="w-[150px] h-[150px] object-cover object-center rounded-full"
+            src="/img/profile-photo%20(1).jpeg"
+            alt="Raza Khalid"
+        />
+        <div>
+          <h2 class="font-space-mono text-5xl ml-10">Hi, I'm Raza.</h2>
+          <div class="flex ml-10 mt-2">
+            <div class="h-6 w-6 transform translate-y-1">
+              <img src="/icons/location.svg" alt="Location">
+            </div>
+            <span
+                class="text-white text-lg ml-2"
+            >Minneapolis, MN (can relocate)</span>
           </div>
-        </div>
-        <div class="max-w-5xl mx-auto mb-12">
-          <p class="font-space-mono text-2xl text-center">
-            I have over 3 years of professional software engineering experience with a focus in front end engineering, UX and UI design.
-          </p>
         </div>
       </div>
 
-      <!--  RIGHT  -->
-      <div>
-        <p class="font-space-mono text-xl text-center mb-4">Learn more from my chat with an imaginary recruiter:</p>
+    <h4 class="text-center mb-8">Why Should You Hire Me?</h4>
+    <div class="grid grid-cols-3 gap-4 mb-16">
+      <q-card
+          dark
+          bordered
+          class="bg-transparent my-card"
+          v-for="(item, index) in valuePropItems"
+          :key="index"
+      >
+        <q-card-section>
+          <h3 class="text-3xl text-center">{{ item.header }}</h3>
+        </q-card-section>
 
-        <div class="bg-white max-w-2xl h-[70vh] mx-auto overflow-y-scroll">
-          <section
-              class="container max-w-2xl mx-auto"
-              v-for="item in chatItems"
-          >
-            <div class="flex items-center justify-end">
-              <div class="bg-blue-700 p-4 my-6 rounded-lg flex-1 font-space-mono max-w-md">
-                {{ item.message }}
-              </div>
-              <div class="w-3 overflow-hidden ">
-                <div class="h-4 bg-blue-700 rotate-45 transform origin-top-left rounded-sm"></div>
-              </div>
-            </div>
-            <div class="flex items-center justify-start">
-              <div class="w-3 overflow-hidden">
-                <div class="h-4 bg-green-500 rotate-45 transform origin-bottom-right rounded-sm"></div>
-              </div>
-              <div class="bg-green-500 p-4 my-6 rounded-lg flex-1 font-space-mono max-w-md">
-                {{ item.response }}
-              </div>
-            </div>
+        <q-separator dark inset />
 
-          </section>
-        </div>
+        <q-card-section>
+          <p class="text-center">{{ item.description }}</p>
+        </q-card-section>
+      </q-card>
+    </div>
+
+    <div class="pb-16">
+      <h3 class="text-3xl text-center mb-8">Learn more from my chat with an imaginary recruiter:</h3>
+      <div class="bg-transparent border rounded-lg max-w-2xl mx-auto">
+        <section
+            class="container max-w-2xl mx-auto text-lg"
+            v-for="item in chatItems"
+        >
+          <div class="flex items-center justify-end">
+            <div class="bg-blue-700 p-4 my-6 rounded-lg flex-1 font-space-mono max-w-md">
+              {{ item.message }}
+            </div>
+            <div class="w-3 overflow-hidden ">
+              <div class="h-4 bg-blue-700 rotate-45 transform origin-top-left rounded-sm"></div>
+            </div>
+          </div>
+          <div class="flex items-center justify-start">
+            <div class="w-3 overflow-hidden">
+              <div class="h-4 bg-green-500 rotate-45 transform origin-bottom-right rounded-sm"></div>
+            </div>
+            <div class="bg-green-500 p-4 my-6 rounded-lg flex-1 font-space-mono max-w-md">
+              {{ item.response }}
+            </div>
+          </div>
+
+        </section>
       </div>
     </div>
 
@@ -105,6 +99,20 @@ export default {
           and product managers, my expertise in these areas bridges the gap between technical and non-technical aspects
           of product development and facilitates knowledge sharing across departments, better collaboration and smoother
           handoff, resulting in better products.`
+        }
+      ],
+      valuePropItems: [
+        {
+          header: "Craftsmanship in Dev & Design",
+          description: "I design user-friendly, high-performing and professional looking products. I develop them to be easily maintainable following software development best-practices."
+        },
+        {
+          header: "End to End Ownership",
+          description: "I own solution development end-to-end, not just a piece of the code. Whether it's a UX decision hurting conversions or a production bug, I'll take responsibility and fix it."
+        },
+        {
+          header: "Constant Improvement",
+          description: "I never stop learning new technologies, techniques and skills. I constantly seek feedback from peers and users and improve myself and the products I create."
         }
       ]
     }

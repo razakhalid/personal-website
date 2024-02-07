@@ -8,9 +8,7 @@
           :options="modalOptions"
           @toggle-modal="toggleModal"
           id="modal"
-          class="opacity-0"
-          style="translateY(-30px);"
-          v-show="modalOptions.show"
+          v-if="modalOptions.show"
       >
       <template #header>
         {{ activeWorkItem.label }}
@@ -119,21 +117,25 @@ export default {
           ],
           slides: [
             {
+              id: "demo1",
               img: {
                 src: "/img/projects/demo-1.png"
               },
             },
             {
+              id: "demo2",
               img: {
                 src: "/img/projects/demo-2.png"
               }
             },
             {
+              id: "demo3",
               img: {
                 src: "/img/projects/demo-3.jpeg"
               }
             },
             {
+              id: "demo4",
               img: {
                 src: "/img/projects/demo-4.jpeg"
               }
@@ -203,19 +205,8 @@ export default {
       if (!this.modalOptions.show) {
         this.modalOptions.show = true;
         this.modalOptions.header = this.activeWorkItem.label;
-        gsap.to('#modal', {
-          opacity: 1,
-          duration: 0.5,
-          y: 0,
-          ease: 'expo'
-        });
       } else {
         this.modalOptions.show = false;
-        gsap.to('#modal', {
-          opacity: 0,
-          duration: 0.5,
-          ease: 'expo'
-        });
       }
     }
   },

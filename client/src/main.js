@@ -16,11 +16,26 @@ const store = createStore({
     }
 });
 
-const app = createApp(App).use(Quasar, quasarUserOptions)
+const app = createApp(App);
 
 // CONFIG
 app.use(router);
 app.use(store);
+app.use(Quasar, quasarUserOptions)
+
+app.mixin({
+    mounted() {
+        const appContent = document.querySelector('#app-content');
+        const height = appContent && appContent.offsetHeight;
+        const width = appContent && appContent.offsetWidth;
+        console.log(width)
+        if (window.resizeCanvas) window.resizeCanvas({ height, width });
+        window.addEventListener('resize', () => {
+            console.log('resizing')
+            window.resizeCanvas({ height });
+        });
+    }
+})
 
 // DIRECTIVES
 app.directive('click-outside', {

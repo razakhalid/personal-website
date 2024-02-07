@@ -5,7 +5,10 @@ import { setBackground } from "@/three/space-background.js";
 export default {
   name: 'App',
   mounted() {
-    setBackground(this.$refs.canvas);
+    const {
+      resizeCanvas
+    } = setBackground(this.$refs.canvas);
+    window.resizeCanvas = resizeCanvas;
   },
   components: {
     Nav
@@ -14,20 +17,22 @@ export default {
 </script>
 
 <template>
-  <div class="relative w-screen h-screen">
+  <div class="relative min-h-screen" id="app-content">
     <canvas
         ref="canvas"
         class="absolute -z-10 h-screen w-screen"
     ></canvas>
-    <Nav></Nav>
+    <div class="max-w-[1000px] mx-auto">
+      <Nav></Nav>
 
-    <RouterView v-slot="{ Component }">
-      <transition name="fade" mode="out-in">
-        <Component
-            :is="Component"
-        ></Component>
-      </transition>
-    </RouterView>
+      <RouterView v-slot="{ Component }">
+        <transition name="fade" mode="out-in">
+          <Component
+              :is="Component"
+          ></Component>
+        </transition>
+      </RouterView>
+    </div>
   </div>
 </template>
 <style>
