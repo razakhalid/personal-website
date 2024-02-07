@@ -606,6 +606,34 @@ video {
   z-index: -10;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
+.z-\[1\] {
+  z-index: 1;
+}
+
+.z-\[5\] {
+  z-index: 5;
+}
+
+.z-\[10\] {
+  z-index: 10;
+}
+
+.z-\[15\] {
+  z-index: 15;
+}
+
+.z-\[20\] {
+  z-index: 20;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -672,12 +700,20 @@ video {
   display: inline-block;
 }
 
+.\!inline {
+  display: inline !important;
+}
+
 .flex {
   display: flex;
 }
 
 .grid {
   display: grid;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-4 {
@@ -704,12 +740,52 @@ video {
   height: 100vh;
 }
 
+.h-40 {
+  height: 10rem;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
+.h-60 {
+  height: 15rem;
+}
+
+.h-52 {
+  height: 13rem;
+}
+
+.h-64 {
+  height: 16rem;
+}
+
+.h-80 {
+  height: 20rem;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-4\/6 {
+  height: 66.666667%;
+}
+
+.h-72 {
+  height: 18rem;
+}
+
 .max-h-12 {
   max-height: 3rem;
 }
 
 .max-h-\[70vh\] {
   max-height: 70vh;
+}
+
+.max-h-full {
+  max-height: 100%;
 }
 
 .min-h-screen {
@@ -740,6 +816,34 @@ video {
   width: 100vw;
 }
 
+.w-48 {
+  width: 12rem;
+}
+
+.w-52 {
+  width: 13rem;
+}
+
+.w-60 {
+  width: 15rem;
+}
+
+.w-64 {
+  width: 16rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-4\/6 {
+  width: 66.666667%;
+}
+
+.w-80 {
+  width: 20rem;
+}
+
 .min-w-\[750px\] {
   min-width: 750px;
 }
@@ -758,6 +862,10 @@ video {
 
 .max-w-md {
   max-width: 28rem;
+}
+
+.max-w-full {
+  max-width: 100%;
 }
 
 .flex-1 {
@@ -831,6 +939,14 @@ video {
   gap: 1rem;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -849,6 +965,14 @@ video {
 
 .border {
   border-width: 1px;
+}
+
+.border-0 {
+  border-width: 0px;
+}
+
+.border-none {
+  border-style: none;
 }
 
 .bg-\[rgba\(0\2c 0\2c 0\2c 0\.75\)\] {
@@ -886,6 +1010,14 @@ video {
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-1 {
+  padding: 0.25rem;
 }
 
 .px-3 {
@@ -1089,12 +1221,28 @@ a, button, p, span {
     margin-left: 2.5rem;
   }
 
+  .sm\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
+  .sm\:inline {
+    display: inline;
+  }
+
+  .sm\:\!inline {
+    display: inline !important;
+  }
+
   .sm\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:gap-4 {
+    gap: 1rem;
   }
 
   .sm\:px-8 {
@@ -1122,6 +1270,18 @@ a, button, p, span {
 
   .md\:gap-6 {
     gap: 1.5rem;
+  }
+
+  .md\:gap-4 {
+    gap: 1rem;
+  }
+
+  .md\:gap-5 {
+    gap: 1.25rem;
+  }
+
+  .md\:gap-10 {
+    gap: 2.5rem;
   }
 }
 

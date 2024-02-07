@@ -4,6 +4,7 @@
 <!--      <q-btn flat label="Homepage" />-->
       <router-link
           :to="{ name: routes[0].name }"
+          class="logo"
       >
         <img
             src="/img/rkd-logo-clipped.png"
@@ -114,6 +115,18 @@ export default {
 @media (max-width: 576px) {
   .q-tab, .q-btn {
     padding: 0 0.5em;
+  }
+}
+@media (max-width: 415px) {
+  .logo, .q-space {
+    display: none;
+  }
+  .q-toolbar {
+    display: flex;
+    justify-content: center;
+  }
+  .q-tabs {
+    width: 100% !important;
   }
 }
 </style>

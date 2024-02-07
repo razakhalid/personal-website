@@ -32,6 +32,12 @@ export default {
   name: 'HomePage',
   mounted() {
     this.animateInitialContent();
+    const canvas = document.querySelector('canvas');
+    if (canvas) canvas.style.zIndex = 0;
+  },
+  beforeUnmount() {
+    const canvas = document.querySelector('canvas');
+    if (canvas) canvas.style.zIndex = -10;
   },
   methods: {
     animateInitialContent() {

@@ -163,18 +163,40 @@ export default {
           ],
           slides: [
             {
+              id: 'verificationProgressTracker1',
               img: {
                 src: "/img/projects/verification-flow-stepper.png"
               }
             }
           ]
         },
-        // {
-        //   id: "smartProductPage",
-        //   label: "Smart Support Page",
-        //   src: "/img/projects/thumbnails/contact-support-thumbnail.png",
-        //   customStyles: 'w-5/6'
-        // }
+        {
+          id: "smartProductPage",
+          label: "Smart Product Page",
+          src: "/img/projects/thumbnails/contact-support-thumbnail.png",
+          details: [
+            {
+              header: "Business Problem",
+              body: "Slow resolution of support tickets regarding 'errors' due to missing details about the error."
+            },
+            {
+              header: "Solution",
+              body: "A feature that records all errors encountered by a user and retrieves the most recent one from an endpoint to (optionally) adds it to the support ticket submitted by the user."
+            },
+            {
+              header: "Impact",
+              body: "About 75% of error tickets received contained details about the error, allowing the support team to resolve them much faster."
+            }
+          ],
+          slides: [
+            {
+              id: 'contactSupport1',
+              img: {
+                src: "/img/projects/contact-support.png"
+              }
+            },
+          ]
+        },
       ],
       modalOptions: {
         show: false,

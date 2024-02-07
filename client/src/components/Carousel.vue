@@ -25,7 +25,10 @@
       </q-carousel-slide>
     </q-carousel>
 
-    <div class="row justify-center">
+    <div
+        class="row justify-center"
+        v-if="slideCount > 1"
+    >
       <q-btn-toggle
           v-model="slide"
           :options="controlsOptions"
@@ -57,8 +60,8 @@ export default {
     }
   },
   beforeMount() {
-    this.slide = this.slideCount && ref(this.options.slides && this.options.slides[0].id);
-    console.log(this.$store.getters.isRazaCool)
+    this.slide = this.slideCount && this.options.slides && this.options.slides[0].id;
+    console.log(this.options.slides[0].img)
   }
 }
 

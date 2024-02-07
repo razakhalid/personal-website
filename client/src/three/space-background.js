@@ -78,10 +78,11 @@ export function setBackground(canvas) {
     renderer.setSize(innerWidth, innerHeight);
     renderer.setPixelRatio(devicePixelRatio);
 
-    new OrbitControls(camera, renderer.domElement);
+    const controls = new OrbitControls(camera, renderer.domElement);
 
-// set camera position
-    camera.position.z = 50;
+    controls.enableZoom = false; // disable zoom
+
+    camera.position.z = 50; // set camera position
 
     const planeGeometry = new THREE.PlaneGeometry(
         world.plane.width,
