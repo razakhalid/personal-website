@@ -6,7 +6,7 @@
         transition-next="slide-left"
         animated
         control-color="primary"
-        class="rounded-borders"
+        class="rounded-borders max-h-[250px]"
         v-if="options.slides && options.slides.length"
     >
       <q-carousel-slide
@@ -16,10 +16,11 @@
           :ref="slide.id"
           class="column no-wrap flex-center"
       >
-        <div class="q-mt-md text-center">
+        <div class="q-mt-md text-center max-h-full">
           <img
               :src="slide.img.src"
               :alt="options.label"
+              class="h-full"
           />
         </div>
       </q-carousel-slide>

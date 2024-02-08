@@ -5,38 +5,11 @@
         @toggle-modal="toggleModal"
     ></Gallery>
     <Modal
-          :options="modalOptions"
-          @toggle-modal="toggleModal"
-          id="modal"
-          v-if="modalOptions.show"
-      >
-      <template #header>
-        {{ activeWorkItem.label }}
-      </template>
-      <template #content>
-          <div class="content py-5 px-3 grid grid-cols-2" v-if="activeWorkItem.slides && activeWorkItem.slides.length">
-            <div class="left relative">
-              <Carousel
-                  :options="activeWorkItem"
-              ></Carousel>
-            </div>
-            <div class="right">
-              <div class="details-container px-8 py-3">
-                <div class="body">
-                  <div
-                      v-if="activeWorkItem && activeWorkItem.details"
-                      v-for="item in activeWorkItem.details"
-                      class="mb-4"
-                  >
-                    <h3 class="text-2xl font-space-mono font-bold">{{ item.header }}</h3>
-                    <p class="u-text-small">{{ item.body }}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </template>
-    </Modal>
+        @toggle-modal="toggleModal"
+        :options="modalOptions"
+        v-model="modalOptions.show"
+    ></Modal>
+
   </div>
 </template>
 
@@ -44,7 +17,6 @@
 import gsap from 'gsap';
 import Gallery from '../components/Gallery.vue';
 import Modal from '../components/Modal.vue';
-import Carousel from '../components/Carousel.vue';
 export default {
   name: 'WorkPage',
   data() {
@@ -85,13 +57,13 @@ export default {
             {
               id: 'consultativePlan3',
               img: {
-                src: "/img/projects/consultative-plan-1.png"
+                src: "/img/projects/consultative-plan-3.png"
               },
             },
             {
               id: 'consultativePlan4',
               img: {
-                src: "/img/projects/consultative-plan-2.png"
+                src: "/img/projects/plan-selection-clipped.png"
               }
             },
           ]
@@ -223,10 +195,9 @@ export default {
   methods: {
     toggleModal(itemId) {
       if (itemId) this.activeWorkItem = this.workItems.find(item => item.id === itemId);
-
       if (!this.modalOptions.show) {
+        this.modalOptions = this.activeWorkItem;
         this.modalOptions.show = true;
-        this.modalOptions.header = this.activeWorkItem.label;
       } else {
         this.modalOptions.show = false;
       }
@@ -235,7 +206,6 @@ export default {
   components: {
     Gallery,
     Modal,
-    Carousel
   }
 }
 </script>
