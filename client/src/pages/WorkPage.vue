@@ -1,15 +1,28 @@
 <template>
   <div class="px-6 py-12">
+    <h1 class="text-3xl mb-4">Projects With Screenshots</h1>
+
+    <p class="text-lg">
+      Here's some of the front end design & development work I did for
+      <a href="https://tokenoftrust.com/" target="_blank" class="hover:underline">Token of Trust</a>,
+      an online age and identity verification company based in Minneapolis, MN.
+    </p>
     <Gallery
         :items="workItems"
         @toggle-modal="toggleModal"
     ></Gallery>
+
+    <p class="text-sm">
+      <strong>* Disclaimer: </strong>Screenshots in this section are the intellectual property
+      of Token of Trust. The author of this website has no ownership over them and has obtained permission to publish them.
+    </p>
+
+
     <Modal
         @toggle-modal="toggleModal"
         :options="modalOptions"
         v-model="modalOptions.show"
     ></Modal>
-
   </div>
 </template>
 

@@ -1,25 +1,5 @@
 <template>
-  <div class="grid grid-cols-1 gap-2 py-8 sm:grid-cols-2 sm:gap-4 md:grid-cols-3 xl:gap-8">
-<!--    <div-->
-<!--        v-for="item in items"-->
-<!--        ref="item"-->
-<!--        class="opacity-0"-->
-<!--        style="transform: translateX(30px);"-->
-<!--    >-->
-<!--      <a-->
-<!--          class="h-60 w-60 bg-white overflow-hidden rounded-lg flex justify-center items-center shadow-lg-->
-<!--          transition duration-200 hover:scale-[102%] hover:cursor-pointer"-->
-<!--          @click.prevent="$emit('toggleModal', item.id)"-->
-<!--      >-->
-<!--        <img-->
-<!--            :src="item.src"-->
-<!--            :alt="item.label"-->
-<!--            class="border rounded-lg"-->
-<!--            :class="item.mobile ? 'h-5/6' : 'w-5/6'"-->
-<!--        />-->
-<!--      </a>-->
-<!--      <p class="text-white text-center mt-1 text-xl">{{ item.label }}</p>-->
-<!--    </div>-->
+  <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-4 md:grid-cols-3 xl:gap-8">
     <a
         @click.prevent="$emit('toggleModal', item.id)"
         v-for="(item, index) in items"
@@ -39,7 +19,7 @@
               />
             </div>
             <q-card-section>
-              <h4 class="text-2xl">{{ item.label }}</h4>
+              <h4 class="text-2xl text-center">{{ item.label }}</h4>
             </q-card-section>
           </q-card>
         </a>

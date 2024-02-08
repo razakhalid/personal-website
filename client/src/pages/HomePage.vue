@@ -15,14 +15,21 @@
           class="font-exo text-5xl opacity-0 italic"
           style="transform: translateY(30px);"
       >MORE THAN JUST A DEVELOPER</h1>
-      <router-link
-          :to="{ name: 'Work' }"
-          id="primary-cta"
-          class="border px-4 py-2 rounded-lg text-sm font-space-mono uppercase mt-8 inline-block opacity-0
-                    hover:bg-white hover:text-gray-800 hover:cursor-pointer"
+      <div
+          class="ctas flex justify-center mt-8 opacity-0"
           style="transform: translateY(30px);"
       >
-        View Work</router-link>
+        <router-link
+            :to="{ name: 'Work' }"
+            class="border px-4 py-2 rounded-lg text-sm font-space-mono uppercase inline-block
+                    hover:bg-white hover:text-gray-800 hover:cursor-pointer"
+        >
+          View Work</router-link>
+        <router-link
+            :to="{ name: 'About' }"
+            class="px-4 py-2 hover:underline text-uppercase"
+        >About &rarr;</router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -54,7 +61,7 @@ export default {
         y: 0,
         ease: 'expo'
       });
-      gsap.to('#primary-cta', {
+      gsap.to('.ctas', {
         opacity: 1,
         duration: 1.5,
         delay: 0.6,

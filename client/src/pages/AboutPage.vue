@@ -39,16 +39,16 @@
         <q-separator dark inset />
 
         <q-card-section>
-          <p class="text-center">{{ item.description }}</p>
+          <p class="text-center text-lg">{{ item.description }}</p>
         </q-card-section>
       </q-card>
     </div>
 
     <div class="pb-16">
       <h3 class="text-3xl text-center mb-8">Learn more from my chat with an imaginary recruiter:</h3>
-      <div class="bg-transparent border rounded-lg max-w-2xl mx-auto">
+      <div class="bg-transparent rounded-lg max-w-xl mx-auto">
         <section
-            class="container max-w-2xl mx-auto text-lg"
+            class="container max-w-full mx-auto text-lg"
             v-for="item in chatItems"
         >
           <div class="flex items-center justify-end">
