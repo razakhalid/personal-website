@@ -1,28 +1,30 @@
 <template>
-  <div class="px-6 py-12">
-    <h1 class="text-3xl mb-4">Projects With Screenshots</h1>
+  <div>
+    <div class="px-6 py-12">
+      <h1 class="text-3xl mb-4">Professional Work</h1>
 
-    <p class="text-lg">
-      Here's some of the front end design & development work I did for
-      <a href="https://tokenoftrust.com/" target="_blank" class="hover:underline">Token of Trust</a>,
-      an online age and identity verification company based in Minneapolis, MN.
-    </p>
-    <Gallery
-        :items="workItems"
-        @toggle-modal="toggleModal"
-    ></Gallery>
+      <p class="text-lg">
+        Here's some of the front end design & development work I did for
+        <a href="https://tokenoftrust.com/" target="_blank" class="hover:underline">Token of Trust</a>,
+        an online age and identity verification company based in Minneapolis, MN.
+      </p>
+      <Gallery
+          :items="workSchema.tot"
+          @toggle-modal="toggleModal"
+      ></Gallery>
 
-    <p class="text-sm">
-      <strong>* Disclaimer: </strong>Screenshots in this section are the intellectual property
-      of Token of Trust. The author of this website has no ownership over them and has obtained permission to publish them.
-    </p>
+      <p class="text-sm">
+        * Disclaimer: Screenshots in this section are the intellectual property
+        of Token of Trust. The author of this website has no ownership over them and has obtained permission to publish them.
+      </p>
 
 
-    <Modal
-        @toggle-modal="toggleModal"
-        :options="modalOptions"
-        v-model="modalOptions.show"
-    ></Modal>
+      <Modal
+          @toggle-modal="toggleModal"
+          :options="modalOptions"
+          v-model="modalOptions.show"
+      ></Modal>
+    </div>
   </div>
 </template>
 
@@ -30,211 +32,29 @@
 import gsap from 'gsap';
 import Gallery from '../components/Gallery.vue';
 import Modal from '../components/Modal.vue';
+import workSchema from '../schema/work.json';
 export default {
   name: 'WorkPage',
   data() {
     return {
       activeWorkItem: {},
-      workItems: [
-        {
-          id: "cryptoWalletVerification",
-          label: "Crypto Wallet Verification",
-          src: "/img/projects/thumbnails/crypto-wallet-verification-thumbnail.png",
-          details: [
-            {
-              header: "Business Problem",
-              body: "Investors needed a way to digitally prove (verify) ownership of their crypto wallets for legal compliance in order to avoid losing their investments."
-            },
-            {
-              header: "Solution",
-              body: "An extension of the identity verification product to verify each user's ownership of their crypto wallets and tie it to their identity. I conducted user interviews, customer demos and did all the design and front end development."
-            },
-            {
-              header: "Impact",
-              body: "A 95% conversion rate; meaning thousands of users used the front end system I designed and developed out of which 95% of users successfully completed the process and were able to keep their investments."
-            }
-          ],
-          slides: [
-            {
-              id: 'cryptoWalletVerification1',
-              img: {
-                src: "/img/projects/crypto-wallet-verification-1.png"
-              },
-            },
-            {
-              id: 'cryptoWalletVerification2',
-              img: {
-                src: "/img/projects/crypto-wallet-verification-2.png"
-              }
-            },
-            {
-              id: 'cryptoWalletVerification3',
-              img: {
-                src: "/img/projects/crypto-wallet-verification-3.png"
-              },
-            }
-          ]
-        },
-        {
-          id: "planRecommendationWizard",
-          label: "Plan Recommendation Wizard",
-          src: "/img/projects/thumbnails/consultative-plan-thumbnail.png",
-          details: [
-            {
-              header: "Business Problem",
-              body: "A 30% time cost to the sales team in talking to new users and recommending the right product configuration for them."
-            },
-            {
-              header: "Solution",
-              body: "A feature that asks the user a series of questions to understand the nature of their business and uses their responses to offer a recommendation for what plan would be best suited to their needs."
-            },
-            {
-              header: "Impact",
-              body: "The time spent by the sales team in performing this task dropped down to around 15%."
-            }
-          ],
-          slides: [
-            {
-              id: 'consultativePlan1',
-              img: {
-                src: "/img/projects/consultative-plan-1.png"
-              },
-            },
-            {
-              id: 'consultativePlan2',
-              img: {
-                src: "/img/projects/consultative-plan-2.png"
-              }
-            },
-            {
-              id: 'consultativePlan3',
-              img: {
-                src: "/img/projects/consultative-plan-3.png"
-              },
-            },
-            {
-              id: 'consultativePlan4',
-              img: {
-                src: "/img/projects/plan-selection-clipped.png"
-              }
-            },
-          ]
-        },
-        {
-          id: "quickAndEasyProductDemo",
-          label: "Quick & Easy Product Demo",
-          src: "/img/projects/thumbnails/demo-2-thumbnail.png",
-          mobile: true,
-          details: [
-            {
-              header: "Business Problem",
-              body: "There was no quick and easy way for new users to try the ID verification product. They had to choose and sign up for a plan to be able to do this, causing a large number of them to abandon the product altogether"
-            },
-            {
-              header: "Solution",
-              body: "A product demo modal that renders on the home page of the client portal right after a user creates an account and is logged in, allowing them to try the product."
-            },
-            {
-              header: "Impact",
-              body: "We saw a significant uptick in the number of new users engaging with the product and discussing pricing options with the sales team."
-            }
-          ],
-          slides: [
-            {
-              id: "demo1",
-              img: {
-                src: "/img/projects/demo-1.png"
-              },
-            },
-            {
-              id: "demo2",
-              img: {
-                src: "/img/projects/demo-2.png"
-              }
-            },
-            {
-              id: "demo3",
-              img: {
-                src: "/img/projects/demo-3.jpeg"
-              }
-            },
-            {
-              id: "demo4",
-              img: {
-                src: "/img/projects/demo-4.jpeg"
-              }
-            }
-          ]
-        },
-        {
-          id: "verificationProgressTracker",
-          label: "Verification Progress Tracker",
-          src: "/img/projects/thumbnails/verification-flow-stepper-thumbnail.png",
-          mobile: true,
-          details: [
-            {
-              header: "Business Problem",
-              body: "Numerous user complaints (via support tickets) about having to wait too long to get \"verified\" via manual review after submitting their ID without a completion time estimate."
-            },
-            {
-              header: "Solution",
-              body: "A progress tracker that reflects the status of the manual review of their ID in real-time."
-            },
-            {
-              header: "Impact",
-              body: "This dramatically reduced the number of user complaints via support tickets by 80% and increased the weekly number of \"cleared\" users by 6%."
-            }
-          ],
-          slides: [
-            {
-              id: 'verificationProgressTracker1',
-              img: {
-                src: "/img/projects/verification-flow-stepper.png"
-              }
-            }
-          ]
-        },
-        {
-          id: "smartProductPage",
-          label: "Smart Product Page",
-          src: "/img/projects/thumbnails/contact-support-thumbnail.png",
-          details: [
-            {
-              header: "Business Problem",
-              body: "Slow resolution of support tickets regarding 'errors' due to missing details about the error."
-            },
-            {
-              header: "Solution",
-              body: "A feature that records all errors encountered by a user and retrieves the most recent one from an endpoint to (optionally) adds it to the support ticket submitted by the user."
-            },
-            {
-              header: "Impact",
-              body: "About 75% of error tickets received contained details about the error, allowing the support team to resolve them much faster."
-            }
-          ],
-          slides: [
-            {
-              id: 'contactSupport1',
-              img: {
-                src: "/img/projects/contact-support.png"
-              }
-            },
-          ]
-        },
-      ],
+      workSchema,
+      workItems: [],
       modalOptions: {
         show: false,
         header: ""
       }
     }
   },
+  created() {
+    Object.keys(this.workSchema).forEach(company => {
+      const itemsForCompany = this.workSchema[company];
+      itemsForCompany.forEach(item => {
+        this.workItems.push(item);
+      })
+    });
+  },
   mounted() {
-    // gsap.to(this.$refs.title, {
-    //   opacity: 1,
-    //   duration: 1.5,
-    //   y: 0,
-    //   ease: 'expo'
-    // });
     gsap.to(this.$refs.workItems, {
       opacity: 1,
       duration: 2,
@@ -246,6 +66,7 @@ export default {
   },
   methods: {
     toggleModal(itemId) {
+      console.log(this.workItems)
       if (itemId) this.activeWorkItem = this.workItems.find(item => item.id === itemId);
       if (!this.modalOptions.show) {
         this.modalOptions = this.activeWorkItem;
