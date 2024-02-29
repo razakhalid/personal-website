@@ -37,6 +37,45 @@ export default {
       activeWorkItem: {},
       workItems: [
         {
+          id: "cryptoWalletVerification",
+          label: "Crypto Wallet Verification",
+          src: "/img/projects/thumbnails/crypto-wallet-verification-thumbnail.png",
+          details: [
+            {
+              header: "Business Problem",
+              body: "Investors needed a way to digitally prove (verify) ownership of their crypto wallets for legal compliance in order to avoid losing their investments."
+            },
+            {
+              header: "Solution",
+              body: "An extension of the identity verification product to verify each user's ownership of their crypto wallets and tie it to their identity. I conducted user interviews, customer demos and did all the design and front end development."
+            },
+            {
+              header: "Impact",
+              body: "A 95% conversion rate; meaning thousands of users used the front end system I designed and developed out of which 95% of users successfully completed the process and were able to keep their investments."
+            }
+          ],
+          slides: [
+            {
+              id: 'cryptoWalletVerification1',
+              img: {
+                src: "/img/projects/crypto-wallet-verification-1.png"
+              },
+            },
+            {
+              id: 'cryptoWalletVerification2',
+              img: {
+                src: "/img/projects/crypto-wallet-verification-2.png"
+              }
+            },
+            {
+              id: 'cryptoWalletVerification3',
+              img: {
+                src: "/img/projects/crypto-wallet-verification-3.png"
+              },
+            }
+          ]
+        },
+        {
           id: "planRecommendationWizard",
           label: "Plan Recommendation Wizard",
           src: "/img/projects/thumbnails/consultative-plan-thumbnail.png",
@@ -130,7 +169,7 @@ export default {
         {
           id: "verificationProgressTracker",
           label: "Verification Progress Tracker",
-          src: "/img/projects/verification-flow-stepper.png",
+          src: "/img/projects/thumbnails/verification-flow-stepper-thumbnail.png",
           mobile: true,
           details: [
             {

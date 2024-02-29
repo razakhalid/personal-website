@@ -9,7 +9,7 @@
         />
         <div>
           <h2 class="font-space-mono text-5xl text-center sm:ml-10 sm:!text-left">Hi, I'm Raza.</h2>
-          <div class="flex justify-center ml-10 mt-2">
+          <div class="flex justify-center mt-2 sm:ml-10">
             <div class="h-6 w-6 transform translate-y-1">
               <img src="/icons/location.svg" alt="Location">
             </div>
