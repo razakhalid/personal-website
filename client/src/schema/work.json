@@ -184,6 +184,39 @@
           }
         }
       ]
+    },
+    {
+      "id":"privacySectionOnFAQPage",
+      "label":"Privacy Section on FAQ Page",
+      "src":"/img/projects/privacySectionOnFAQPage.png",
+      "details":[
+        {
+          "header":"Business Problem",
+          "body":"38% of users were abandoning the verification process when asked to submit their ID."
+        },
+        {
+          "header":"Solution",
+          "body":"A section on the FAQ page (accessible from the omnipresent 'Learn More' link) highlighting the company's commitment towards protecting users' private data through meaningful messaging and custom icons representing compliance with various governmental privacy regulations."
+        },
+        {
+          "header":"Impact",
+          "body":"The amount of users abandoning the process at this step decreased by 14% in 3 months."
+        }
+      ],
+      "slides":[
+        {
+          "id":"privacySectionOnFAQPage1",
+          "img":{
+            "src":"/img/projects/privacySectionOnFAQPage.png"
+          }
+        },
+        {
+          "id": "privacySectionOnFAQPage2",
+          "img":{
+            "src":"/img/projects/display-explanation-learn-more.png"
+          }
+        }
+      ]
     }
   ]
 }
