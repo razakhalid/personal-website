@@ -4,6 +4,7 @@ import router from './router'
 import { Quasar } from 'quasar'
 import quasarUserOptions from './quasar-user-options'
 import { createStore } from 'vuex';
+import SecondaryNav from '@/components/SecondaryNav.vue';
 
 const store = createStore({
     state() {
@@ -48,44 +49,7 @@ app.directive('click-outside', {
     }
 });
 
-app.mount('#app')
+// GLOBAL COMPONENTS
+app.component('SecondaryNav', SecondaryNav);
 
-const carousels = document.querySelectorAll("[data-carousel]");
-
-carousels.forEach(carousel => {
-    const buttons = carousel.querySelectorAll("[data-carousel-btn]");
-    const imgHeight = carousel
-        .querySelector("[data-active]")
-        .querySelector("img")
-        .offsetHeight;
-
-    setInterval(() => {
-        changeSlide({
-            slides: carousel.querySelector("[data-carousel-slides]"),
-            offset: 1
-        })
-    }, 7000);
-
-    buttons.forEach(btn => {
-        btn.addEventListener("click", () => {
-            changeSlide({
-                slides: btn
-                    .closest("[data-carousel]")
-                    .querySelector("[data-carousel-slides]"),
-                offset: btn.dataset.carouselBtn === "left" ? -1 : 1
-            });
-        });
-    })
-})
-
-function changeSlide(options = {}) {
-    const {slides, offset} = options;
-    const activeSlide = slides.querySelector("[data-active]");
-    let newIndex = [...slides.children].indexOf(activeSlide) + offset;
-
-    if (newIndex < 0) newIndex = slides.children.length - 1;
-    if (newIndex >= slides.children.length) newIndex = 0;
-
-    slides.children[newIndex].dataset.active = true;
-    delete activeSlide.dataset.active;
-}
+app.mount('#app');

@@ -21,14 +21,14 @@
       >
         <router-link
             :to="{ name: 'Work' }"
-            class="border px-4 py-2 rounded-lg text-sm font-space-mono uppercase inline-block
+            class="text-lg border px-4 py-2 rounded-lg text-sm font-space-mono uppercase inline-block
                     hover:bg-white hover:text-gray-800 hover:cursor-pointer"
         >
-          View Work</router-link>
+          SEE MY WORK</router-link>
         <router-link
             :to="{ name: 'About' }"
-            class="px-4 py-2 hover:underline text-uppercase"
-        >About &rarr;</router-link>
+            class="text-md px-4 py-2 hover:underline text-uppercase"
+        >GET TO KNOW ME</router-link>
       </div>
     </div>
   </div>

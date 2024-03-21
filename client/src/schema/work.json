@@ -220,33 +220,27 @@
     },
     {
       "id":"homePage",
-      "label":"Home Page",
-      "src":"/img/projects/privacySectionOnFAQPage.png",
+      "label":"Home Page ",
+      "src":"/img/projects/home-page-1.png",
       "details":[
         {
           "header":"Business Problem",
-          "body":"38% of users were abandoning the verification process when asked to submit their ID."
+          "body":"Lots of new users were getting lost in the dashboard, analytics showed random navigation behavior and a delay in finding the feature most suites to their needs."
         },
         {
           "header":"Solution",
-          "body":"A section on the FAQ page (accessible from the omnipresent 'Learn More' link) highlighting the company's commitment towards protecting users' private data through meaningful messaging and custom icons representing compliance with various governmental privacy regulations."
+          "body":"A home page we can drop users on when they signup and login, summarizing the platform and what they can do with it."
         },
         {
           "header":"Impact",
-          "body":"The amount of users abandoning the process at this step decreased by 14% in 3 months."
+          "body":"New users found what they were looking for a lot quicker and were navigating the dashboard a lot more consistently. We were able to identify patterns which led to some awesome UX improvements."
         }
       ],
       "slides":[
         {
-          "id":"privacySectionOnFAQPage1",
+          "id":"homePage",
           "img":{
-            "src":"/img/projects/privacySectionOnFAQPage.png"
-          }
-        },
-        {
-          "id": "privacySectionOnFAQPage2",
-          "img":{
-            "src":"/img/projects/display-explanation-learn-more.png"
+            "src":"/img/projects/home-page-1.png"
           }
         }
       ]
