@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <p>I have amazing skills</p>
+  <div class="sm:my-16">
+    <section>
+      <h4>Technical</h4>
+    </section>
   </div>
 </template>
 

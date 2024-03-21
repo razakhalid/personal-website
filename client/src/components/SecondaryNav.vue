@@ -1,22 +1,22 @@
 <template>
   <div
-      style="background-color: rgba(0,0,0,0.5);"
-      class="px-8"
+      style="background-color: rgba(75,93,101, 0.2);"
+      class="px-8 py-2"
   >
     <div>
       <q-tabs
           v-model="tab"
-          class="bg-grey-9"
+          class="bg-transparent"
           dense
           align="justify"
       >
         <q-tab
             class="text-white"
             :name="item.name"
-            :label="item.label"
+            :label="item.name"
             v-for="(item, index) in tabOptions"
             :key="index"
-            @click.prevent="$emit('tabChange', item.name)"
+            @click.prevent="$emit('tabChange', index)"
             :ref="item.name"
         />
       </q-tabs>
@@ -33,11 +33,15 @@ export default {
     tabOptions: {
       type: Object,
       required: true
+    },
+    activeTabIndex: {
+      type: Number,
+      required: true
     }
   },
   data() {
     return {
-      tab: ref('Introduction')
+      tab: ref(this.tabOptions[this.activeTabIndex].name)
     }
   }
 

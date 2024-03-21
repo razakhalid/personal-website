@@ -1,13 +1,14 @@
 <template>
-  <div class="mt-20">
+  <div>
 
     <SecondaryNav
         :tab-options="tabOptions"
+        :active-tab-index="activeTabIndex"
         @tab-change="handleTabChange"
     >
       <template #content>
         <transition name="fade" mode="out-in">
-          <component :is="activeTab"></component>
+          <component :is="tabOptions[activeTabIndex].name"></component>
         </transition>
       </template>
     </SecondaryNav>
@@ -18,35 +19,44 @@
 </template>
 <script>
 import SecondaryNav from "@/components/SecondaryNav.vue";
-import Introduction from "@/components/Introduction.vue";
-import WhyHireMe from "@/components/WhyHireMe.vue";
+import Intro from "@/components/Intro.vue";
+import Resume from "@/components/Resume.vue";
 import Skills from "@/components/Skills.vue";
 
 export default {
   name: 'AboutPage',
-  components: {Skills, WhyHireMe, Introduction, SecondaryNav},
+  components: {Skills, Resume, Intro, SecondaryNav},
   data() {
     return {
       tabOptions: [
         {
-          name: 'Introduction',
-          label: 'Introduction'
+          name: 'Intro'
         },
         {
-          name: 'WhyHireMe',
-          label: 'Why Hire Me'
+          name: 'Skills'
         },
         {
-          name: 'Skills',
-          label: 'Skills'
+          name: 'Resume'
         }
       ],
-      activeTab: 'Introduction'
+      activeTabIndex: 0
     }
   },
+  created() {
+    const { query } = this.$route;
+    const { i } = query;
+    if (i) this.activeTabIndex = i;
+  },
   methods: {
-    handleTabChange(activeTab) {
-      this.activeTab = activeTab;
+    handleTabChange(activeTabIndex) {
+      const self = this;
+      this.activeTabIndex = activeTabIndex;
+      this.$router.push({
+        path: this.$route.path,
+        query: {
+          i: activeTabIndex
+        }
+      })
     }
   }
 }

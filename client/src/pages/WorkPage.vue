@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="px-6 py-12">
+    <div>
       <h1 class="text-3xl mb-4">Professional Work</h1>
 
       <p class="text-lg">
