@@ -21,7 +21,7 @@
       >
         <router-link
             :to="{ name: 'Work' }"
-            class="text-lg border px-4 py-2 rounded-lg text-sm font-space-mono uppercase inline-block
+            class="text-lg border px-4 py-2 mb-2 rounded-lg text-sm font-space-mono uppercase inline-block
                     hover:bg-white hover:text-gray-800 hover:cursor-pointer"
         >
           SEE MY WORK</router-link>
