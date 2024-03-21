@@ -1,49 +1,55 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
+import { Quasar } from 'quasar'
+import quasarUserOptions from './quasar-user-options'
+import { createStore } from 'vuex';
+import SecondaryNav from '@/components/SecondaryNav.vue';
 
-const app = createApp(App)
+const store = createStore({
+    state() {
+     return {
+         isRazaCool: true
+     }
+    },
+    getters: {
+        isRazaCool: (state) => state.isRazaCool
+    }
+});
 
-app.use(router)
+const app = createApp(App);
 
-app.mount('#app')
+// CONFIG
+app.use(router);
+app.use(store);
+app.use(Quasar, quasarUserOptions)
 
-const carousels = document.querySelectorAll("[data-carousel]");
-
-carousels.forEach(carousel => {
-    const buttons = carousel.querySelectorAll("[data-carousel-btn]");
-    const imgHeight = carousel
-        .querySelector("[data-active]")
-        .querySelector("img")
-        .offsetHeight;
-
-    setInterval(() => {
-        changeSlide({
-            slides: carousel.querySelector("[data-carousel-slides]"),
-            offset: 1
-        })
-    }, 7000);
-
-    buttons.forEach(btn => {
-        btn.addEventListener("click", () => {
-            changeSlide({
-                slides: btn
-                    .closest("[data-carousel]")
-                    .querySelector("[data-carousel-slides]"),
-                offset: btn.dataset.carouselBtn === "left" ? -1 : 1
-            });
+app.mixin({
+    mounted() {
+        const appContent = document.querySelector('#app-content');
+        const height = appContent && appContent.offsetHeight;
+        const width = appContent && appContent.offsetWidth;
+        if (window.resizeCanvas) window.resizeCanvas({ height, width });
+        window.addEventListener('resize', () => {
+            window.resizeCanvas({ height });
         });
-    })
+    }
 })
 
-function changeSlide(options = {}) {
-    const {slides, offset} = options;
-    const activeSlide = slides.querySelector("[data-active]");
-    let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+// DIRECTIVES
+app.directive('click-outside', {
+    mounted(el, binding) {
+        document.body.addEventListener('click', (event) => {
+            const { target } = event;
+            const isOutsideClick = !(target === el || el.contains(target));
+            if (isOutsideClick) {
+                binding.value();
+            }
+        });
+    }
+});
 
-    if (newIndex < 0) newIndex = slides.children.length - 1;
-    if (newIndex >= slides.children.length) newIndex = 0;
+// GLOBAL COMPONENTS
+app.component('SecondaryNav', SecondaryNav);
 
-    slides.children[newIndex].dataset.active = true;
-    delete activeSlide.dataset.active;
-}
+app.mount('#app');

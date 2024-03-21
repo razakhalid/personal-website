@@ -2,19 +2,29 @@
   "name": "client",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
-    "dev": "npx tailwindcss -i ./src/assets/css/tailwind-input.css -o ./src/assets/css/tailwind-output.css --watch && vite",
-    "build": "npx tailwindcss -i ./src/assets/css/tailwind-input.css -o ./src/css/tailwind-output.css && vite build",
+    "build": "npx tailwindcss -i src/input.css -o src/output.css && vite build",
+    "dev": "vite & npx tailwindcss -i src/input.css -o src/output.css --watch",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@quasar/extras": "^1.0.0",
+    "dat.gui": "^0.7.9",
+    "gsap": "^3.6.0",
+    "quasar": "^2.0.0",
+    "three": "^0.126.1",
     "vue": "^3.3.11",
-    "vue-router": "^4.2.5"
+    "vue-carousel": "^0.18.0",
+    "vue-carousel-3d": "^1.0.1",
+    "vue-router": "^4.2.5",
+    "vue3-carousel": "^0.3.1",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.2",
     "tailwindcss": "^3.4.1",
-    "vite": "^5.0.10"
-  }
+    "vite": "^5.0.10",
+    "vue-cli-plugin-quasar": "~5.0.2"
+  },
+  "type": "module"
 }
