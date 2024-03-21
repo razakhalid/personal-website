@@ -621,13 +621,12 @@ video {
   margin-bottom: 2rem;
 }
 
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
 .mb-16 {
   margin-bottom: 4rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 
 .mb-4 {
@@ -638,28 +637,16 @@ video {
   margin-left: 0.5rem;
 }
 
-.mt-16 {
-  margin-top: 4rem;
-}
-
 .mt-2 {
   margin-top: 0.5rem;
-}
-
-.mt-8 {
-  margin-top: 2rem;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem;
 }
 
 .mt-4 {
   margin-top: 1rem;
 }
 
-.ml-auto {
-  margin-left: auto;
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .inline-block {
@@ -710,12 +697,12 @@ video {
   max-height: 100%;
 }
 
-.min-h-\[525px\] {
-  min-height: 525px;
-}
-
 .min-h-screen {
   min-height: 100vh;
+}
+
+.min-h-\[525px\] {
+  min-height: 525px;
 }
 
 .w-4 {
