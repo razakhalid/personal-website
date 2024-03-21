@@ -1,42 +1,37 @@
 <template>
   <div>
 
-    <SecondaryNav
-        :tab-options="tabOptions"
-        :active-tab-index="activeTabIndex"
-        @tab-change="handleTabChange"
-    >
-      <template #content>
-        <transition name="fade" mode="out-in">
-          <component :is="tabOptions[activeTabIndex].name"></component>
-        </transition>
-      </template>
-    </SecondaryNav>
-
-
+<!--    <SecondaryNav-->
+<!--        :tab-options="tabOptions"-->
+<!--        :active-tab-index="activeTabIndex"-->
+<!--        @tab-change="handleTabChange"-->
+<!--    >-->
+<!--      <template #content>-->
+<!--        <transition name="fade" mode="out-in">-->
+<!--          <component :is="tabOptions[activeTabIndex].name"></component>-->
+<!--        </transition>-->
+<!--      </template>-->
+<!--    </SecondaryNav>-->
+    <Intro></Intro>
     <footer class="pb-16"></footer>
   </div>
 </template>
 <script>
 import SecondaryNav from "@/components/SecondaryNav.vue";
 import Intro from "@/components/Intro.vue";
-import Resume from "@/components/Resume.vue";
 import Skills from "@/components/Skills.vue";
 
 export default {
   name: 'AboutPage',
-  components: {Skills, Resume, Intro, SecondaryNav},
+  components: {Skills, Intro, SecondaryNav},
   data() {
     return {
       tabOptions: [
         {
           name: 'Intro'
         },
-        // {
-        //   name: 'Skills'
-        // },
         {
-          name: 'Resume'
+          name: 'Skills'
         }
       ],
       activeTabIndex: 0
