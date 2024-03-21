@@ -6,7 +6,7 @@
     ></canvas>
     <div class="max-w-[1000px] mx-auto px-4 sm:px-8">
       <Nav></Nav>
-      <div class="py-6 px-2 sm:p-6 sm:py-12 md:py-16">
+      <div class="py-8 px-2 sm:px-6 sm:py-12 md:py-16">
         <RouterView v-slot="{ Component }">
           <transition name="fade" mode="out-in">
             <Component
