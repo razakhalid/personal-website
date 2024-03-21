@@ -1,11 +1,11 @@
 <template>
-  <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-4 md:grid-cols-3 xl:gap-8">
+  <div class="sm:grid sm:grid-cols-2 sm:gap-4 md:grid-cols-3 xl:gap-8">
     <a
         @click.prevent="$emit('toggleModal', item.id)"
         v-for="(item, index) in items"
         :key="index"
-        class="overflow-hidden flex justify-center items-center shadow-lg transition duration-200
-        sm:mb-4 hover:scale-[102%] hover:cursor-pointer"
+        class="my-8 overflow-hidden flex justify-center items-center shadow-lg transition duration-200
+        sm:my-2 hover:scale-[102%] hover:cursor-pointer"
     >
       <q-card
               class="my-card bg-transparent h-80 w-80"
