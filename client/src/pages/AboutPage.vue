@@ -32,9 +32,9 @@ export default {
         {
           name: 'Intro'
         },
-        {
-          name: 'Skills'
-        },
+        // {
+        //   name: 'Skills'
+        // },
         {
           name: 'Resume'
         }
