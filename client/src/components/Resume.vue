@@ -1,9 +1,9 @@
 <template>
   <div class="mt-16">
-    <iframe
+    <embed
         src="../../public/pdf/Resume%20-%20Raza%20Khalid.pdf"
         class="min-h-[525px] h-full w-full sm:h-[725px] lg:h-[1125px] lg:w-[835px]"
-    ></iframe>
+    >
   </div>
 </template>
 <script>
