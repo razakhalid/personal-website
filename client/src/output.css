@@ -641,10 +641,6 @@ video {
   margin-top: 0.5rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
-}
-
 .mt-8 {
   margin-top: 2rem;
 }
@@ -699,10 +695,6 @@ video {
 
 .min-h-screen {
   min-height: 100vh;
-}
-
-.min-h-\[525px\] {
-  min-height: 525px;
 }
 
 .w-4 {
@@ -768,10 +760,6 @@ video {
 
 .items-center {
   align-items: center;
-}
-
-.justify-end {
-  justify-content: flex-end;
 }
 
 .justify-center {
@@ -840,11 +828,6 @@ video {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}
-
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 
 .py-8 {
@@ -1009,10 +992,6 @@ a, button, p, span {
     display: grid;
   }
 
-  .sm\:h-\[725px\] {
-    height: 725px;
-  }
-
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1025,8 +1004,9 @@ a, button, p, span {
     gap: 1rem;
   }
 
-  .sm\:p-6 {
-    padding: 1.5rem;
+  .sm\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .sm\:px-8 {
@@ -1038,11 +1018,6 @@ a, button, p, span {
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
-
-  .sm\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
 }
 
 @media (min-width: 768px) {
@@ -1053,16 +1028,6 @@ a, button, p, span {
   .md\:py-16 {
     padding-top: 4rem;
     padding-bottom: 4rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .lg\:h-\[1125px\] {
-    height: 1125px;
-  }
-
-  .lg\:w-\[835px\] {
-    width: 835px;
   }
 }
 

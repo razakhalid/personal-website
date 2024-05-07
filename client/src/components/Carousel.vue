@@ -6,7 +6,7 @@
         transition-next="slide-left"
         animated
         control-color="primary"
-        class="rounded-borders max-h-[250px]"
+        class="rounded-borders"
         v-if="options.slides && options.slides.length"
     >
       <q-carousel-slide

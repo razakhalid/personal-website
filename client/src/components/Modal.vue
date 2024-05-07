@@ -2,7 +2,7 @@
 
   <div class="text-black">
     <q-dialog v-model="options.show" transition-show="rotate" transition-hide="rotate" class="text-black">
-      <q-card class="px-8">
+      <q-card class="px-8 max-w-full">
         <q-card-section>
           <h1
               v-if="options.label"
@@ -81,3 +81,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+@media (min-width: 600px) {
+  .q-dialog__inner--minimized > div {
+    max-width: calc(100vh - 2rem);
+  }
+}
+</style>
