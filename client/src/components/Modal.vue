@@ -1,7 +1,7 @@
 <template>
 
   <div class="text-black">
-    <q-dialog v-model="options.show" transition-show="rotate" transition-hide="rotate" class="text-black">
+    <q-dialog v-model="options.show" transition-show="slide-up" transition-hide="slide-down" class="text-black">
       <q-card class="px-8 max-w-full">
         <q-card-section>
           <h1
@@ -51,19 +51,6 @@ export default {
       type: Object,
       required: true
     }
-  },
-  mounted() {
-    gsap.to(this.$refs.overlay, {
-      opacity: 1,
-      duration: 0.3,
-      ease: 'expo'
-    });
-    gsap.to(this.$refs.modal, {
-      opacity: 1,
-      duration: 0.5,
-      y: 0,
-      ease: 'expo'
-    });
   },
   methods: {
     close() {

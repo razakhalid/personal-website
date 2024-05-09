@@ -1,7 +1,7 @@
 <template>
   <div class="sm:grid sm:grid-cols-2 sm:gap-4 md:grid-cols-3 xl:gap-8">
     <a
-        @click.prevent="$emit('toggleModal', item.id)"
+        @click.prevent="$emit('toggleModal', item)"
         v-for="(item, index) in items"
         :key="index"
         class="my-8 overflow-hidden flex justify-center items-center shadow-lg transition duration-200

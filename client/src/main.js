@@ -7,13 +7,20 @@ import { createStore } from 'vuex';
 import SecondaryNav from '@/components/SecondaryNav.vue';
 
 const store = createStore({
-    state() {
-     return {
-         isRazaCool: true
-     }
-    },
+    state: () => ({
+        tab: {
+            tabs: [
+                {
+                    name: "Token of Trust"
+                }
+            ],
+            active: 0
+        }
+    }),
     getters: {
-        isRazaCool: (state) => state.isRazaCool
+        activeTab(state) {
+            return state.tab.tabs()
+        }
     }
 });
 

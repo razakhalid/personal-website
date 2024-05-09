@@ -1,30 +1,11 @@
 <template>
   <div>
-    <div>
-      <h1 class="text-3xl mb-4">Professional Work</h1>
-
-      <p class="text-lg">
-        Here's some of the front end design & development work I did for
-        <a href="https://tokenoftrust.com/" target="_blank" class="hover:underline">Token of Trust</a>,
-        an online age and identity verification company based in Minneapolis, MN.
-      </p>
-      <Gallery
-          :items="workSchema.tot"
-          @toggle-modal="toggleModal"
-      ></Gallery>
-
-      <p class="text-sm">
-        * Disclaimer: Screenshots in this section are the intellectual property
-        of Token of Trust. The author of this website has no ownership over them and has obtained permission to publish them.
-      </p>
-
-
-      <Modal
-          @toggle-modal="toggleModal"
-          :options="modalOptions"
-          v-model="modalOptions.show"
-      ></Modal>
-    </div>
+    <ContentWrapper
+        :tabs="[
+            { label: 'Token of Trust' }
+        ]"
+        :content-components="createContentComponents()"
+    ></ContentWrapper>
   </div>
 </template>
 
@@ -33,6 +14,8 @@ import gsap from 'gsap';
 import Gallery from '../components/Gallery.vue';
 import Modal from '../components/Modal.vue';
 import workSchema from '../schema/work.json';
+import ContentWrapper from "@/components/ContentWrapper.vue";
+import {h} from "vue";
 export default {
   name: 'WorkPage',
   data() {
@@ -47,12 +30,12 @@ export default {
     }
   },
   created() {
-    Object.keys(this.workSchema).forEach(company => {
-      const itemsForCompany = this.workSchema[company];
-      itemsForCompany.forEach(item => {
-        this.workItems.push(item);
-      })
-    });
+    // Object.keys(this.workSchema.items).forEach(company => {
+    //   const itemsForCompany = this.workSchema[company];
+    //   itemsForCompany.forEach(item => {
+    //     this.workItems.push(item);
+    //   })
+    // });
   },
   mounted() {
     gsap.to(this.$refs.workItems, {
@@ -63,22 +46,51 @@ export default {
       ease: 'expo',
       delay: 0.3
     });
+    this.createContentComponents();
   },
   methods: {
-    toggleModal(itemId) {
+    toggleModal(item) {
       console.log(this.workItems)
-      if (itemId) this.activeWorkItem = this.workItems.find(item => item.id === itemId);
+      // if (itemId) this.activeWorkItem = this.workItems.find(item => item.id === itemId);
       if (!this.modalOptions.show) {
-        this.modalOptions = this.activeWorkItem;
+        this.modalOptions = item;
         this.modalOptions.show = true;
       } else {
         this.modalOptions.show = false;
       }
+    },
+    createContentComponents() {
+      const contentComponents = [];
+      const self = this;
+      const disclaimer = "* Disclaimer: Screenshots in this section are the intellectual property of the associated company. The author of this website has no ownership over them and has obtained permission to publish them."
+      for (const company in workSchema) {
+        const { name, description } = workSchema[company];
+        contentComponents.push({
+          name,
+          render() {
+            return h('div', [
+              h('p', { class: 'text-lg', innerHTML: description }),
+              h(Gallery, {
+                items: workSchema[company].items,
+                onToggleModal: self.toggleModal
+              }),
+              h('p', { class: 'text-sm', innerHTML: disclaimer }),
+              h(Modal, {
+                onToggleModal: self.toggleModal,
+                options: self.modalOptions,
+                vModel: self.modalOptions.show
+              })
+            ]);
+          }
+        });
+      }
+      return contentComponents;
     }
   },
   components: {
     Gallery,
     Modal,
+    ContentWrapper
   }
 }
 </script>

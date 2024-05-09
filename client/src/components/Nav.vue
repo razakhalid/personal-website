@@ -1,56 +1,58 @@
 <template>
-  <div class="q-pt-md flex justify-center">
-    <q-toolbar class="bg-transparent">
-<!--      <q-btn flat label="Homepage" />-->
-      <router-link
-          :to="{ name: routes[0].name }"
-          class="logo"
-      >
-        <img
-            src="/img/rkd-logo-clipped.png"
-            alt="RKD"
-            class="max-h-12"
-        />
-      </router-link>
-      <q-space />
-
-      <!--
-        notice shrink property since we are placing it
-        as child of QToolbar
-      -->
-      <q-tabs v-model="tab" shrink stretch>
-        <q-route-tab
-            v-for="({ name }, i) in routes"
-            :to="{ name }"
-            :label="name"
-            :key="i"
-        />
-        <q-btn-dropdown
-            auto-close
-            stretch
-            flat
-            label="Contact"
+  <div>
+    <div class="q-pt-md flex justify-center">
+      <q-toolbar class="bg-transparent">
+        <!--      <q-btn flat label="Homepage" />-->
+        <router-link
+            :to="{ name: routes[0].name }"
+            class="logo"
         >
-          <q-list>
-            <q-item>
-              <q-item-section>
-                <a
-                    href="mailto:ra97za@gmail.com?subject=Nice Portfolio!"
-                    class="text-black flex hover:underline hover:cursor-pointer"
-                >
-                  <div class="h-6 w-6 transform translate-y-1">
-                    <img src="/icons/email.svg" alt="Email">
-                  </div>
-                  <span
-                      class="text-lg ml-2"
-                  >ra97za@gmail.com</span>
-                </a>
-              </q-item-section>
-            </q-item>
-          </q-list>
-        </q-btn-dropdown>
-      </q-tabs>
-    </q-toolbar>
+          <img
+              src="/img/rkd-logo-clipped.png"
+              alt="RKD"
+              class="max-h-12"
+          />
+        </router-link>
+        <q-space />
+
+        <!--
+          notice shrink property since we are placing it
+          as child of QToolbar
+        -->
+        <q-tabs v-model="tab" shrink stretch>
+          <q-route-tab
+              v-for="({ name }, i) in routes"
+              :to="{ name }"
+              :label="name"
+              :key="i"
+          />
+          <q-btn-dropdown
+              auto-close
+              stretch
+              flat
+              label="Contact"
+          >
+            <q-list>
+              <q-item>
+                <q-item-section>
+                  <a
+                      href="mailto:ra97za@gmail.com?subject=Nice Portfolio!"
+                      class="text-black flex hover:underline hover:cursor-pointer"
+                  >
+                    <div class="h-6 w-6 transform translate-y-1">
+                      <img src="/icons/email.svg" alt="Email">
+                    </div>
+                    <span
+                        class="text-lg ml-2"
+                    >ra97za@gmail.com</span>
+                  </a>
+                </q-item-section>
+              </q-item>
+            </q-list>
+          </q-btn-dropdown>
+        </q-tabs>
+      </q-toolbar>
+    </div>
   </div>
 </template>
 
@@ -58,6 +60,7 @@
 import gsap from 'gsap';
 import routes from '../router/routes';
 import { ref } from 'vue';
+import SecondaryNav from "@/components/SecondaryNav.vue";
 export default {
   name: 'Nav',
   data() {
