@@ -10,8 +10,9 @@
       <q-card
               class="my-card bg-transparent h-80 w-80"
               flat
+              style="border-radius: 0;"
           >
-            <div class="h-4/6 w-full bg-white flex justify-center items-center rounded-lg">
+            <div class="h-4/6 w-full bg-white flex justify-center items-center">
               <img
                   :src="item.src"
                   :alt="item.label"

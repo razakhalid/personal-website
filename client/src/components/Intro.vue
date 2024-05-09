@@ -15,7 +15,7 @@
       </div>
       <div class="col-span-5 sm:col-span-3">
         <h3 class="text-5x mb-4">Hi, I'm Raza.</h3>
-        <p class="text-xl max-w-md mx-auto">A <strong>full stack software engineer</strong> on a mission to build web engaging technology that <strong>solves business problems</strong>.</p>
+        <p class="text-xl max-w-md mx-auto">A <strong>senior front end engineer</strong> on a mission to build web engaging technology that <strong>solves business problems</strong>.</p>
       </div>
     </section>
     <section>

@@ -685,10 +685,6 @@ video {
   max-height: 3rem;
 }
 
-.max-h-\[250px\] {
-  max-height: 250px;
-}
-
 .max-h-full {
   max-height: 100%;
 }
