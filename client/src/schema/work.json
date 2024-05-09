@@ -1,47 +1,21 @@
 {
   "tot": {
     "name": "Token of Trust",
-    "description": "Here's some of the front end design & development work I did for Token of Trust, an online age and identity verification company based in Minneapolis, MN.",
-    "items": [
+    "links": [
       {
-        "id":"cryptoWalletVerification",
-        "label":"Crypto Wallet Verification",
-        "src":"/img/projects/thumbnails/crypto-wallet-verification-thumbnail.png",
-        "details":[
-          {
-            "header":"Business Problem",
-            "body":"Investors needed a way to digitally verify ownership of their crypto wallets for legal compliance in order to avoid losing their investments."
-          },
-          {
-            "header":"Solution",
-            "body":"I conducted user interviews, usability tests and led the design and front end development for the addition of new steps to the identity verification workflow that verify each user's ownership of their crypto wallets and tie it to their identity."
-          },
-          {
-            "header":"Impact",
-            "body":"A 95% conversion rate; meaning thousands of users used the front end system I designed and developed out of which 95% of users successfully completed the process and were able to keep their investments."
-          }
-        ],
-        "slides":[
-          {
-            "id":"cryptoWalletVerification1",
-            "img":{
-              "src":"/img/projects/crypto-wallet-verification-1.png"
-            }
-          },
-          {
-            "id":"cryptoWalletVerification2",
-            "img":{
-              "src":"/img/projects/crypto-wallet-verification-2.png"
-            }
-          },
-          {
-            "id":"cryptoWalletVerification3",
-            "img":{
-              "src":"/img/projects/crypto-wallet-verification-3.png"
-            }
-          }
-        ]
+        "name": "Company Website",
+        "url":  "https://tokenoftrust.com"
       },
+      {
+        "name": "Main Product",
+        "url": "https://app.tokenoftrust.com/hq"
+      },
+      {
+        "name": "WordPress Plugin",
+        "url": "https://wordpress.org/plugins/token-of-trust"
+      }
+    ],
+    "items": [
       {
         "id":"planRecommendationWizard",
         "label":"Plan Recommendation Wizard",
@@ -244,6 +218,45 @@
             "id":"homePage",
             "img":{
               "src":"/img/projects/home-page-1.png"
+            }
+          }
+        ]
+      },
+      {
+        "id":"cryptoWalletVerification",
+        "label":"Crypto Wallet Verification",
+        "src":"/img/projects/thumbnails/crypto-wallet-verification-thumbnail.png",
+        "details":[
+          {
+            "header":"Business Problem",
+            "body":"Investors needed a way to digitally verify ownership of their crypto wallets for legal compliance in order to avoid losing their investments."
+          },
+          {
+            "header":"Solution",
+            "body":"I conducted user interviews, usability tests and led the design and front end development for the addition of new steps to the identity verification workflow that verify each user's ownership of their crypto wallets and tie it to their identity."
+          },
+          {
+            "header":"Impact",
+            "body":"A 95% conversion rate; meaning thousands of users used the front end system I designed and developed out of which 95% of users successfully completed the process and were able to keep their investments."
+          }
+        ],
+        "slides":[
+          {
+            "id":"cryptoWalletVerification1",
+            "img":{
+              "src":"/img/projects/crypto-wallet-verification-1.png"
+            }
+          },
+          {
+            "id":"cryptoWalletVerification2",
+            "img":{
+              "src":"/img/projects/crypto-wallet-verification-2.png"
+            }
+          },
+          {
+            "id":"cryptoWalletVerification3",
+            "img":{
+              "src":"/img/projects/crypto-wallet-verification-3.png"
             }
           }
         ]

@@ -38,6 +38,7 @@ export default {
     // });
   },
   mounted() {
+    if (this.$route.params.id) alert(this.$route.params.id);
     gsap.to(this.$refs.workItems, {
       opacity: 1,
       duration: 2,
@@ -64,15 +65,30 @@ export default {
       const self = this;
       const disclaimer = "* Disclaimer: Screenshots in this section are the intellectual property of the associated company. The author of this website has no ownership over them and has obtained permission to publish them."
       for (const company in workSchema) {
-        const { name, description } = workSchema[company];
+        const {
+          name,
+          description,
+          links
+        } = workSchema[company];
+        const linksMarkup = [];
+        links.forEach(({ name, url }) => {
+          linksMarkup.push(
+              h('a', {
+                innerHTML: name,
+                href: url,
+                target: '_blank',
+                class: 'text-lg hover:underline mx-8'
+              }))
+        });
         contentComponents.push({
           name,
           render() {
             return h('div', [
-              h('p', { class: 'text-lg', innerHTML: description }),
+              h('div', [...linksMarkup]),
               h(Gallery, {
                 items: workSchema[company].items,
-                onToggleModal: self.toggleModal
+                onToggleModal: self.toggleModal,
+                class: 'mt-8'
               }),
               h('p', { class: 'text-sm', innerHTML: disclaimer }),
               h(Modal, {
