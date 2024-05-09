@@ -67,36 +67,31 @@ export default {
       for (const company in workSchema) {
         const {
           name,
-          description,
           links
         } = workSchema[company];
-        const linksMarkup = [];
-        links.forEach(({ name, url }) => {
-          linksMarkup.push(
-              h('a', {
-                innerHTML: name,
-                href: url,
-                target: '_blank',
-                class: 'text-lg hover:underline mx-8'
-              }))
-        });
         contentComponents.push({
           name,
           render() {
             return h('div', [
-              h('div', [...linksMarkup]),
-              h(Gallery, {
-                items: workSchema[company].items,
-                onToggleModal: self.toggleModal,
-                class: 'mt-8'
+              h('div', [...(links.map(({name, url}) => {
+                return h('a', {
+                  innerHTML: name,
+                  href: url,
+                  target: '_blank',
+                  class: 'text-lg hover:underline mx-2 sm:mx-8'
+                })})),
+                h(Gallery, {
+                  items: workSchema[company].items,
+                  onToggleModal: self.toggleModal,
+                  class: 'mt-8'
               }),
-              h('p', { class: 'text-sm', innerHTML: disclaimer }),
-              h(Modal, {
+                h('p', { class: 'text-sm', innerHTML: disclaimer }),
+                h(Modal, {
                 onToggleModal: self.toggleModal,
                 options: self.modalOptions,
                 vModel: self.modalOptions.show
               })
-            ]);
+            ])])
           }
         });
       }

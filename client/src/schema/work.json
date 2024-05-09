@@ -3,16 +3,12 @@
     "name": "Token of Trust",
     "links": [
       {
-        "name": "Company Website",
+        "name": "View Website",
         "url":  "https://tokenoftrust.com"
       },
       {
-        "name": "Main Product",
+        "name": "View Product",
         "url": "https://app.tokenoftrust.com/hq"
-      },
-      {
-        "name": "WordPress Plugin",
-        "url": "https://wordpress.org/plugins/token-of-trust"
       }
     ],
     "items": [
