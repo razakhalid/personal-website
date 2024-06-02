@@ -1,11 +1,34 @@
 <template>
   <div>
-    <ContentWrapper
-        :tabs="[
-            { label: 'Token of Trust' }
-        ]"
-        :content-components="createContentComponents()"
-    ></ContentWrapper>
+    <div
+        v-for="(company, i) in workSchema"
+        :key="i"
+    >
+      <h3 class="text-2xl text-center">{{ company.name }}</h3>
+      <div
+          class="flex justify-evenly mt-2"
+      >
+        <a
+            v-for="(link, j) in company.links"
+            :key="j"
+            :href="link.url"
+            class="text-lg hover:underline mx-2 sm:mx-8"
+        >{{ link.name }}</a>
+      </div>
+
+      <Gallery
+          :items="company.items"
+          class="mt-4"
+          @toggle-modal="toggleModal"
+      />
+
+    </div>
+    <p class="disclaimer text-sm">* Disclaimer: Screenshots in this section are the intellectual property of the associated company. The author of this website has no ownership over them and has obtained permission to publish them.</p>
+    <Modal
+        @toggle-modal="toggleModal"
+        :options="modalOptions"
+        v-model="modalOptions.show"
+    ></Modal>
   </div>
 </template>
 
@@ -14,8 +37,6 @@ import gsap from 'gsap';
 import Gallery from '../components/Gallery.vue';
 import Modal from '../components/Modal.vue';
 import workSchema from '../schema/work.json';
-import ContentWrapper from "@/components/ContentWrapper.vue";
-import {h} from "vue";
 export default {
   name: 'WorkPage',
   data() {
@@ -29,14 +50,6 @@ export default {
       }
     }
   },
-  created() {
-    // Object.keys(this.workSchema.items).forEach(company => {
-    //   const itemsForCompany = this.workSchema[company];
-    //   itemsForCompany.forEach(item => {
-    //     this.workItems.push(item);
-    //   })
-    // });
-  },
   mounted() {
     if (this.$route.params.id) alert(this.$route.params.id);
     gsap.to(this.$refs.workItems, {
@@ -47,61 +60,20 @@ export default {
       ease: 'expo',
       delay: 0.3
     });
-    this.createContentComponents();
   },
   methods: {
     toggleModal(item) {
-      console.log(this.workItems)
-      // if (itemId) this.activeWorkItem = this.workItems.find(item => item.id === itemId);
       if (!this.modalOptions.show) {
         this.modalOptions = item;
         this.modalOptions.show = true;
       } else {
         this.modalOptions.show = false;
       }
-    },
-    createContentComponents() {
-      const contentComponents = [];
-      const self = this;
-      const disclaimer = "* Disclaimer: Screenshots in this section are the intellectual property of the associated company. The author of this website has no ownership over them and has obtained permission to publish them."
-      for (const company in workSchema) {
-        const {
-          name,
-          links
-        } = workSchema[company];
-        contentComponents.push({
-          name,
-          render() {
-            return h('div', [
-              h('div', [...(links.map(({name, url}) => {
-                return h('a', {
-                  innerHTML: name,
-                  href: url,
-                  target: '_blank',
-                  class: 'text-lg hover:underline mx-2 sm:mx-8'
-                })})),
-                h(Gallery, {
-                  items: workSchema[company].items,
-                  onToggleModal: self.toggleModal,
-                  class: 'mt-8'
-              }),
-                h('p', { class: 'text-sm', innerHTML: disclaimer }),
-                h(Modal, {
-                onToggleModal: self.toggleModal,
-                options: self.modalOptions,
-                vModel: self.modalOptions.show
-              })
-            ])])
-          }
-        });
-      }
-      return contentComponents;
     }
   },
   components: {
     Gallery,
-    Modal,
-    ContentWrapper
+    Modal
   }
 }
 </script>

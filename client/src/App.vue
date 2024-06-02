@@ -2,11 +2,11 @@
   <div class="relative min-h-screen" id="app-content">
     <canvas
         ref="canvas"
-        class="fixed -z-10 h-screen w-screen"
+        class="fixed -z-10"
     ></canvas>
     <div class="max-w-[1000px] mx-auto px-4 sm:px-8">
       <Nav></Nav>
-      <div class="py-8 px-2 sm:px-6 sm:py-12 md:py-16">
+      <div class="py-8 px-2 sm:px-6 sm:py-12 md:py-16 overflow-y-auto">
         <RouterView v-slot="{ Component }">
           <transition name="fade" mode="out-in">
             <Component

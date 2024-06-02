@@ -227,10 +227,11 @@ export function setBackground(canvas) {
     });
 
     function resizeCanvas(options = {}) {
-        const {
+        let {
             height,
             width = innerWidth
         } = options;
+        height = Math.min(height, innerHeight);
         camera.aspect = width / height;
         camera.updateProjectionMatrix();
         // console.log('resizing to: ', height);

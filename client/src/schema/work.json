@@ -258,5 +258,49 @@
         ]
       }
     ]
+  },
+  "quill": {
+    "name": "Quill Security Technology",
+    "links": [
+      {
+        "name": "View Product",
+        "url": "https://app.quillsecurity.com"
+      }
+    ],
+    "items": [
+      {
+        "id":"selfSignup",
+        "label":"Self Signup",
+        "src":"/img/projects/quill/quill-signup.png",
+        "details":[
+          {
+            "header":"Business Problem",
+            "body":"The manual process of creating and configuring new user accounts was wasting the the sales and development teams' valuable time and yielded fewer new accounts created monthly."
+          },
+          {
+            "header":"Solution",
+            "body":"I worked with a backend engineer to develop a signup flow, automating account creation and configuration and allowing new users to signup without needing our assistance."
+          },
+          {
+            "header":"Impact",
+            "body":"This increased the number of new accounts created monthly by 33% and saved the sales and development teams a significant amount of time for other important work."
+          }
+        ],
+        "slides":[
+          {
+            "id":"login",
+            "img":{
+              "src":"/img/projects/quill/quill-login.png"
+            }
+          },
+          {
+            "id":"signup",
+            "img":{
+              "src":"/img/projects/quill/quill-signup.png"
+            }
+          }
+        ]
+      }
+    ]
   }
 }
