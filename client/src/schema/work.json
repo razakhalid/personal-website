@@ -220,16 +220,16 @@
       },
       {
         "id":"cryptoWalletVerification",
-        "label":"Crypto Wallet Verification",
+        "label":"Digital Wallet Verification",
         "src":"/img/projects/thumbnails/crypto-wallet-verification-thumbnail.png",
         "details":[
           {
             "header":"Business Problem",
-            "body":"Investors needed a way to digitally verify ownership of their crypto wallets for legal compliance in order to avoid losing their investments."
+            "body":"Investors needed a way to digitally verify ownership of their digital wallets for legal compliance in order to avoid losing their investments."
           },
           {
             "header":"Solution",
-            "body":"I conducted user interviews, usability tests and led the design and front end development for the addition of new steps to the identity verification workflow that verify each user's ownership of their crypto wallets and tie it to their identity."
+            "body":"I conducted user interviews, usability tests and led the design and front end development for the addition of new steps to the identity verification workflow that verify each user's ownership of their wallets and tie it to their identity."
           },
           {
             "header":"Impact",
@@ -297,6 +297,33 @@
             "id":"signup",
             "img":{
               "src":"/img/projects/quill/quill-signup.png"
+            }
+          }
+        ]
+      },
+      {
+        "id":"facilityPage",
+        "label":"Facility Page",
+        "src":"/img/projects/quill/quill-facility.png",
+        "details":[
+          {
+            "header":"Business Problem",
+            "body":"Customers needed a way to monitor all security data for each facility in their organization in one place for security purposes"
+          },
+          {
+            "header":"Solution",
+            "body":"I worked with a product manager and a backend engineer to build a 'Facility' page with widgets showing key data such as the budget, threat assessment and overall 'Quill Score'."
+          },
+          {
+            "header":"Impact",
+            "body":"This enabled customers to stay up to date on the security status for each facility without having to gather data from multiple sources."
+          }
+        ],
+        "slides":[
+          {
+            "id":"facility1",
+            "img":{
+              "src":"/img/projects/quill/quill-facility.png"
             }
           }
         ]

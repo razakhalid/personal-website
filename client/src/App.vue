@@ -2,7 +2,7 @@
   <div class="relative min-h-screen" id="app-content">
     <canvas
         ref="canvas"
-        class="fixed -z-10"
+        class="fixed -z-10 top-0 left-0"
     ></canvas>
     <div class="max-w-[1000px] mx-auto px-4 sm:px-8">
       <Nav></Nav>
