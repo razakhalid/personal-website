@@ -15,19 +15,23 @@
           </transition>
         </RouterView>
       </div>
+      <Footer></Footer>
     </div>
   </div>
 </template>
 <script>
 import Nav from "@/components/Nav.vue";
+import Footer from "@/components/Footer.vue";
 import { setBackground } from "@/three/space-background.js";
 import SecondaryNav from "@/components/SecondaryNav.vue";
+import { ref } from "vue";
 
 export default {
   name: 'App',
   data() {
     return {
-      tab: null
+      tab: null,
+      dialog: ref(false)
     }
   },
   mounted() {
@@ -35,10 +39,12 @@ export default {
       resizeCanvas
     } = setBackground(this.$refs.canvas);
     window.resizeCanvas = resizeCanvas;
+    setTimeout(() => { this.dialog = true; }, 1000);
   },
   components: {
     SecondaryNav,
-    Nav
+    Nav,
+    Footer
   }
 }
 </script>

@@ -15,14 +15,12 @@
           class="font-exo text-5xl opacity-0 italic mb-4"
           style="transform: translateY(30px);"
       >MORE THAN JUST A DEVELOPER</h1>
-
       <p
           class="text-2xl opacity-0 my-10 summary-item"
           style="transform: translateY(30px);"
       >
-          An impact-driven, business-problem-solving senior front end engineer
+          An impact-driven, business-problem-solving <strong>senior front end engineer</strong>
         </p>
-
       <div
           class="ctas flex column items-center mt-12 opacity-0"
           style="transform: translateY(30px);"
@@ -38,12 +36,13 @@
             class="text-lg px-4 py-2 my-4 hover:underline text-uppercase"
         >GET TO KNOW ME</router-link>
       </div>
+
     </div>
   </div>
 </template>
 <script>
 import gsap from "gsap";
-import CheckIcon from 'vue-material-design-icons/Check.vue'
+
 export default {
   name: 'HomePage',
   data() {
@@ -52,13 +51,17 @@ export default {
         "Impact-driven Senior Front End Engineer",
         "5+ years of professional experience",
         "Currently looking for work"
-      ]
+      ],
     }
   },
   mounted() {
     this.animateInitialContent();
     const canvas = document.querySelector('canvas');
     if (canvas) canvas.style.zIndex = 0;
+    // console.log(this.$q.notify);
+    setTimeout(() => {
+      this.$store.commit('toggleDialog');
+    }, 1000);
   },
   beforeUnmount() {
     const canvas = document.querySelector('canvas');
@@ -95,9 +98,6 @@ export default {
         ease: 'expo'
       });
     }
-  },
-  components: {
-    CheckIcon
   }
 }
 </script>

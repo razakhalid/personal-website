@@ -8,18 +8,11 @@ import SecondaryNav from '@/components/SecondaryNav.vue';
 
 const store = createStore({
     state: () => ({
-        tab: {
-            tabs: [
-                {
-                    name: "Token of Trust"
-                }
-            ],
-            active: 0
-        }
+        showDialog: false
     }),
-    getters: {
-        activeTab(state) {
-            return state.tab.tabs()
+    mutations: {
+        toggleDialog(state) {
+            state.showDialog = !state.showDialog;
         }
     }
 });
