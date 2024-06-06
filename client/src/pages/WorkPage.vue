@@ -4,7 +4,7 @@
         v-for="(company, i) in workSchema"
         :key="i"
     >
-      <h3 class="text-2xl text-center">{{ company.name }}</h3>
+      <h2 class="text-3xl text-center">{{ company.name }}</h2>
       <div
           class="flex justify-evenly mt-2"
       >
