@@ -2,7 +2,7 @@
 
   <div class="text-black">
     <q-dialog v-model="options.show" transition-show="slide-up" transition-hide="slide-down" class="text-black">
-      <q-card class="px-8 max-w-full">
+      <q-card class="px-4 sm:px-8 max-w-full">
         <q-card-section>
           <h1
               v-if="options.label"
@@ -16,7 +16,7 @@
           </a>
         </q-card-section>
         <div>
-          <q-card-section>
+          <q-card-section class="q-px-none">
             <div
                 class="left relative mb-4"
                 v-if="options.slides && options.slides.length"

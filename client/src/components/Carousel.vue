@@ -14,7 +14,8 @@
           :key="index"
           :name="slide.id"
           :ref="slide.id"
-          class="column no-wrap flex-center"
+          class="column no-wrap flex-center q-px-none q-py-none"
+          style="max-height: 40px;"
       >
         <div class="q-mt-md text-center max-h-full">
           <img
@@ -27,7 +28,7 @@
     </q-carousel>
 
     <div
-        class="row justify-center"
+        class="row justify-center mt-2"
         v-if="slideCount > 1"
     >
       <q-btn-toggle
@@ -67,3 +68,10 @@ export default {
 }
 
 </script>
+<style>
+@media (max-width: 640px) {
+  .q-carousel {
+    height: 300px;
+  }
+}
+</style>

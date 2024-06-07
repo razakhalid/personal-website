@@ -11,7 +11,7 @@
             <span class="flip-horizontal">
               <HandWaveIcon></HandWaveIcon>
             </span>
-            <h6 class="ml-2 mb-2">Hey there! Raza here.</h6>
+            <h6 class="ml-2">Hey there! Raza here.</h6>
           </div>
           <q-space></q-space>
           <q-btn
