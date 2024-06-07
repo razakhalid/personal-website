@@ -1,10 +1,28 @@
 <template>
   <div>
+    <div class="quick-links flex justify-center items-center">
+
+      <a
+          v-for="(company, j) in workSchema"
+          :key="j"
+          :href="`#${company.id}`"
+      >
+        <q-chip
+            color="blue-9"
+            text-color="white"
+        >{{ company.name }}
+        </q-chip>
+      </a>
+    </div>
     <div
         v-for="(company, i) in workSchema"
         :key="i"
+        class="mt-4"
     >
-      <h2 class="text-3xl text-center">{{ company.name }}</h2>
+      <h2
+          class="text-3xl text-center"
+          :id="company.id"
+      >{{ company.name }}</h2>
       <div
           class="flex justify-evenly mt-2"
       >

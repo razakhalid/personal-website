@@ -1,5 +1,6 @@
 {
   "tot": {
+    "id": "tot",
     "name": "Token of Trust",
     "links": [
       {
@@ -260,6 +261,7 @@
     ]
   },
   "quill": {
+    "id": "quill",
     "name": "Quill Security Technology",
     "links": [
       {
@@ -341,15 +343,15 @@
         "details":[
           {
             "header":"Business Problem",
-            "body":"Customers needed a way to monitor all security data for each facility in their organization in one place for security purposes"
+            "body":"The support team reported customers having trouble understanding certain product related concepts, preventing them from making full use of the product."
           },
           {
             "header":"Solution",
-            "body":"I worked with a product manager and a backend engineer to build a 'Facility' page with widgets showing key data such as the budget, threat assessment and overall 'Quill Score'."
+            "body":"Together with a product manager and UX designer, I implemented the UI for the product wiki containing explanations to help users make sense of security related data such as threats and threat-reduction-measures with easy-to-read information architecture."
           },
           {
             "header":"Impact",
-            "body":"This enabled customers to stay up to date on the security status for each facility without having to gather data from multiple sources."
+            "body":"Customers were able to use the product closer to its full potential and understand more product features."
           }
         ],
         "slides":[
@@ -369,6 +371,39 @@
             "id":"wiki3",
             "img":{
               "src":"/img/projects/quill/quill-threats-wiki-1.png"
+            }
+          }
+        ]
+      },
+      {
+        "id":"teamManagement",
+        "label":"Users Page",
+        "src":"/img/projects/quill/quill-dashboard-users-modal.png",
+        "details":[
+          {
+            "header":"Business Problem",
+            "body":"Customers needed a way to give employees in their organization access to the dashboard to monitor facility security data and use various product features."
+          },
+          {
+            "header":"Solution",
+            "body":"I worked with a backend engineer to implement a 'Users Page' containing a modal with a form for customers to add employees from their organization as users."
+          },
+          {
+            "header":"Impact",
+            "body":"Customers were able to successfully give their employees controlled access to the organization account to monitor the security of the organization's facilities."
+          }
+        ],
+        "slides":[
+          {
+            "id":"team1",
+            "img":{
+              "src":"/img/projects/quill/quill-dashboard-users.png"
+            }
+          },
+          {
+            "id":"team2",
+            "img":{
+              "src":"/img/projects/quill/quill-dashboard-users-modal.png"
             }
           }
         ]
