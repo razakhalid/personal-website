@@ -19,10 +19,16 @@
         :key="i"
         class="mt-4"
     >
-      <h2
+      <h1
           class="text-3xl text-center"
           :id="company.id"
-      >{{ company.name }}</h2>
+      >{{ company.name }}</h1>
+
+
+      <div class="overview mt-2">
+        <p>{{ company.companyDescription }}</p>
+      </div>
+
       <div
           class="flex justify-evenly mt-2"
       >
@@ -30,8 +36,13 @@
             v-for="(link, j) in company.links"
             :key="j"
             :href="link.url"
+            target="_blank"
             class="text-lg hover:underline mx-2 sm:mx-8"
-        >{{ link.name }}</a>
+        >
+          <q-btn color="grey-9">
+            <div>{{ link.name }}</div>
+          </q-btn>
+        </a>
       </div>
 
       <Gallery

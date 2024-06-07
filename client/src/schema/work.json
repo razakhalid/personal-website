@@ -2,14 +2,19 @@
   "tot": {
     "id": "tot",
     "name": "Token of Trust",
+    "companyDescription": "Token of Trust is a SaaS platform that helps e-commerce and other businesses meet compliance requirements through its international age and identity verification as well as excise tax reporting solutions.",
     "links": [
       {
-        "name": "View Website",
+        "name": "Website",
         "url":  "https://tokenoftrust.com"
       },
       {
-        "name": "View Product",
+        "name": "Product",
         "url": "https://app.tokenoftrust.com/hq"
+      },
+      {
+        "name": "Linkedin",
+        "url": "https://www.linkedin.com/company/token-of-trust/"
       }
     ],
     "items": [
@@ -263,10 +268,15 @@
   "quill": {
     "id": "quill",
     "name": "Quill Security Technology",
+    "companyDescription": "Quill is a SaaS platform that calculates the physical security risk of an organization's facilities and recommends risk-reduction measures.",
     "links": [
       {
-        "name": "View Product",
+        "name": "Product",
         "url": "https://app.quillsecurity.com"
+      },
+      {
+        "name": "Linkedin",
+        "url": "https://www.linkedin.com/company/quillsecurity/"
       }
     ],
     "items": [
