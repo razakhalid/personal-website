@@ -6,20 +6,20 @@
         id="container"
     >
       <p
-          class="font-space-mono text-2xl uppercase tracking-wide opacity-0"
+          class="font-space-mono text-xl sm:text-2xl uppercase tracking-wide opacity-0"
           id="main-header"
           style="transform: translateY(30px);"
       >Raza Khalid</p>
       <h1
           id="tagline"
-          class="font-exo text-5xl opacity-0 italic mb-4"
+          class="font-exo text-4xl sm:text-5xl opacity-0 italic mb-4"
           style="transform: translateY(30px);"
       >MORE THAN JUST A DEVELOPER</h1>
       <p
-          class="text-2xl opacity-0 my-10 summary-item"
+          class="text-xl sm:text-2xl opacity-0 my-10 summary-item"
           style="transform: translateY(30px);"
       >
-          An impact-driven, business-problem-solving <strong>senior front end engineer</strong>
+          An impact-driven <strong>senior front end engineer</strong> who solves business problems.
         </p>
       <div
           class="ctas flex column items-center mt-12 opacity-0"

@@ -19,37 +19,25 @@
           notice shrink property since we are placing it
           as child of QToolbar
         -->
-        <q-tabs v-model="tab" shrink stretch>
+        <q-tabs v-model="tab" shrink stretch class="ml-8">
           <q-route-tab
               v-for="({ name }, i) in routes"
               :to="{ name }"
               :label="name"
               :key="i"
           />
-          <q-btn-dropdown
-              auto-close
-              stretch
-              flat
-              label="Contact"
+          <q-fab
+              v-model="fabCenter"
+              vertical-actions-align="center"
+              color="yellow-6"
+              text-color="black"
+              direction="down"
+              label="Let's chat!"
+              icon="mail"
+              class="fixed right-6 bottom-6"
           >
-            <q-list>
-              <q-item>
-                <q-item-section>
-                  <a
-                      href="mailto:ra97za@gmail.com?subject=Nice Portfolio!"
-                      class="text-black flex hover:underline hover:cursor-pointer"
-                  >
-                    <div class="h-6 w-6 transform translate-y-1">
-                      <img src="/icons/email.svg" alt="Email">
-                    </div>
-                    <span
-                        class="text-lg ml-2"
-                    >ra97za@gmail.com</span>
-                  </a>
-                </q-item-section>
-              </q-item>
-            </q-list>
-          </q-btn-dropdown>
+            <q-fab-action color="yellow-6" text-color="black" icon="mail" label="ra97za@gmail.com" />
+          </q-fab>
         </q-tabs>
       </q-toolbar>
     </div>
@@ -67,7 +55,8 @@ export default {
     return {
       isOpen: false,
       routes,
-      tab: ref('')
+      tab: ref(''),
+      fabCenter: false
     }
   },
   methods: {
@@ -121,7 +110,7 @@ export default {
   }
 }
 @media (max-width: 415px) {
-  .logo, .q-space {
+  .q-space {
     display: none;
   }
   .q-toolbar {

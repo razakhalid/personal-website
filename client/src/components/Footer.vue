@@ -41,12 +41,36 @@
         </q-card-section>
       </q-card>
     </q-dialog>
+    <q-fab
+        v-model="fabCenter"
+        vertical-actions-align="center"
+        color="yellow-6"
+        text-color="black"
+        direction="up"
+        label="Let's chat!"
+        icon="chat"
+        class="fixed right-6 bottom-6"
+    >
+      <q-fab-action color="yellow-6" text-color="black" icon="mail">
+        <a
+            href="mailto:ra97za@gmail.com?subject=Work Opportunity"
+            class="ml-2 hover:underline"
+        >ra97za@gmail.com</a>
+      </q-fab-action>
+    </q-fab>
   </div>
 </template>
 <script>
 import HandWaveIcon from "vue-material-design-icons/HandWave.vue";
+
+
 export default {
   name: 'Footer',
+  data() {
+    return {
+      fabCenter: false
+    }
+  },
   components: {
     HandWaveIcon
   }

@@ -30,14 +30,14 @@
       </div>
 
       <div
-          class="flex justify-evenly mt-2"
+          class="flex justify-center mt-2"
       >
         <a
             v-for="(link, j) in company.links"
             :key="j"
             :href="link.url"
             target="_blank"
-            class="text-lg hover:underline mx-2 sm:mx-8"
+            class="text-lg hover:underline m-2 sm:mx-8"
         >
           <q-btn color="grey-9">
             <div>{{ link.name }}</div>
