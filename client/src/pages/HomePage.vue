@@ -48,7 +48,7 @@ export default {
   data() {
     return {
       summaryItems: [
-        "Impact-driven Senior Front End Engineer",
+        "Impact-driven Front End Engineer",
         "5+ years of professional experience",
         "Currently looking for work"
       ],
