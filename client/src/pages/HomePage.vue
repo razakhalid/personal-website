@@ -19,7 +19,7 @@
           class="text-xl sm:text-2xl opacity-0 my-10 summary-item"
           style="transform: translateY(30px);"
       >
-          An impact-driven <strong>senior front end engineer</strong> who solves business problems.
+          An impact-driven <strong>front end engineer</strong> who solves business problems.
         </p>
       <div
           class="ctas flex column items-center mt-12 opacity-0"
